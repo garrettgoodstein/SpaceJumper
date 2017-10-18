@@ -18,11 +18,11 @@ public class PlanetMoveDemo : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		// X axis
-		if (transform.position.x <= -1100f || transform.position.x >= 1100f) {
+		if (transform.position.x <= -1300f || transform.position.x >= 1300f) {
 			xSpeed = -xSpeed;
 		}
 		// Y axis
-		if (transform.position.y <= -470f || transform.position.y >= 470f) {
+		if (transform.position.y <= -450f || transform.position.y >= 450f) {
 			ySpeed = -ySpeed;
 		}
 		transform.Translate(xSpeed, ySpeed, 0f);
