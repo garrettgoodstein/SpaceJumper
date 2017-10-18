@@ -26,7 +26,7 @@ public class PlanetMoveDemo : MonoBehaviour {
 			ySpeed = -ySpeed;
 		}
 		transform.Translate(xSpeed, ySpeed, 0f);
-		//transform.localScale += new Vector3 (1f, 1f, 0f);
+		transform.localScale += new Vector3 (0.0f, 0.02f, 0f);
 
 		//transform.RotateAround (0f,0f,0f);
 			
