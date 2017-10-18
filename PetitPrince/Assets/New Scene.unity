@@ -173,8 +173,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605142360}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -3.9, y: 3.1, z: 0}
   m_LocalScale: {x: 50.99758, y: 16.151506, z: 1}
+=======
+  m_LocalPosition: {x: 704, y: -10, z: 0}
+  m_LocalScale: {x: 43.83757, y: 26.887548, z: 1}
+>>>>>>> parent of 5f525ff... merging
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -196,17 +201,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!114 &746999517
 MonoBehaviour:
+=======
+--- !u!50 &746999517
+Rigidbody2D:
+  serializedVersion: 4
+>>>>>>> parent of 5f525ff... merging
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746999516}
+<<<<<<< HEAD
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+>>>>>>> parent of 5f525ff... merging
 --- !u!212 &746999518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -238,7 +265,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 0
+>>>>>>> parent of 5f525ff... merging
   m_Sprite: {fileID: 21300000, guid: e6ec9d30ae5351545a8648cc607f75ad, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -256,11 +287,19 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746999516}
   m_LocalRotation: {x: -0, y: -0, z: 0.04154757, w: -0.9991365}
+<<<<<<< HEAD
   m_LocalPosition: {x: 121, y: 129, z: 0}
   m_LocalScale: {x: 16.352552, y: 13.330277, z: 0.86999995}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+=======
+  m_LocalPosition: {x: 100, y: 422, z: 0}
+  m_LocalScale: {x: 18.796038, y: 15.322159, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+>>>>>>> parent of 5f525ff... merging
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1084.762}
 --- !u!1 &854002917
 GameObject:
@@ -310,7 +349,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 2
+>>>>>>> parent of 5f525ff... merging
   m_Sprite: {fileID: 21300000, guid: a294389e33b54a54497318af25136cd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -328,6 +371,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854002917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 554, y: -321, z: 0}
   m_LocalScale: {x: 112.62801, y: 111.328316, z: 0.38343173}
   m_Children:
@@ -337,15 +381,36 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &854002920
 MonoBehaviour:
+=======
+  m_LocalPosition: {x: 1209, y: -823, z: 0}
+  m_LocalScale: {x: 293.73682, y: 273.5108, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &854002920
+CircleCollider2D:
+>>>>>>> parent of 5f525ff... merging
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854002917}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.11
+>>>>>>> parent of 5f525ff... merging
 --- !u!1 &966755212
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,6 +420,10 @@ GameObject:
   m_Component:
   - component: {fileID: 966755214}
   - component: {fileID: 966755213}
+<<<<<<< HEAD
+=======
+  - component: {fileID: 966755215}
+>>>>>>> parent of 5f525ff... merging
   m_Layer: 0
   m_Name: LittlePrince
   m_TagString: Untagged
@@ -393,7 +462,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 0
+>>>>>>> parent of 5f525ff... merging
   m_Sprite: {fileID: 21300000, guid: 872d95b35a43d674398e78407e3b5aa8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -410,6 +483,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966755212}
+<<<<<<< HEAD
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.6570301, y: 1.7156461, z: 0}
   m_LocalScale: {x: 0.54888546, y: 0.2659121, z: 2.6080263}
@@ -417,6 +491,35 @@ Transform:
   m_Father: {fileID: 854002919}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1228, y: -395, z: 0}
+  m_LocalScale: {x: 61.81988, y: 29.603546, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &966755215
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 966755212}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+>>>>>>> parent of 5f525ff... merging
 --- !u!1 &1172225432
 GameObject:
   m_ObjectHideFlags: 0
@@ -483,6 +586,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1172225432}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -999, y: 257, z: 0}
   m_LocalScale: {x: 100.76886, y: 100.21046, z: 1.2111294}
   m_Children: []
@@ -491,15 +595,36 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1172225435
 MonoBehaviour:
+=======
+  m_LocalPosition: {x: 1345, y: 48, z: 0}
+  m_LocalScale: {x: 106.03245, y: 90.95479, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1172225435
+CircleCollider2D:
+>>>>>>> parent of 5f525ff... merging
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1172225432}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 2.14
+>>>>>>> parent of 5f525ff... merging
 --- !u!1 &1291829571
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,7 +673,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 3
+>>>>>>> parent of 5f525ff... merging
   m_Sprite: {fileID: 21300000, guid: b4b0d4d1861015946bf853f0d77e2906, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -566,6 +695,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1291829571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -281, y: -283, z: 0}
   m_LocalScale: {x: 111.56947, y: 110.87709, z: 0.6117158}
   m_Children: []
@@ -574,15 +704,36 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1291829574
 MonoBehaviour:
+=======
+  m_LocalPosition: {x: -8.5, y: -39, z: 0}
+  m_LocalScale: {x: 182.38776, y: 159.34581, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1291829574
+CircleCollider2D:
+>>>>>>> parent of 5f525ff... merging
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1291829571}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.2500001
+>>>>>>> parent of 5f525ff... merging
 --- !u!1 &1346943305
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,7 +804,11 @@ Transform:
   m_LocalScale: {x: 60.36228, y: 50.205418, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< HEAD
   m_RootOrder: 3
+=======
+  m_RootOrder: 4
+>>>>>>> parent of 5f525ff... merging
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1346943308
 Rigidbody2D:
@@ -675,6 +830,98 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
+=======
+--- !u!1 &1476032453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1476032458}
+  - component: {fileID: 1476032457}
+  - component: {fileID: 1476032456}
+  - component: {fileID: 1476032455}
+  - component: {fileID: 1476032454}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1476032454
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476032453}
+  m_Enabled: 1
+--- !u!92 &1476032455
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476032453}
+  m_Enabled: 1
+--- !u!124 &1476032456
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476032453}
+  m_Enabled: 1
+--- !u!20 &1476032457
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476032453}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
+--- !u!4 &1476032458
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476032453}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 141, y: 5.800003, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> parent of 5f525ff... merging
 --- !u!1 &2036199029
 GameObject:
   m_ObjectHideFlags: 0
@@ -723,7 +970,11 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
+<<<<<<< HEAD
   m_SortingOrder: 1
+=======
+  m_SortingOrder: 0
+>>>>>>> parent of 5f525ff... merging
   m_Sprite: {fileID: 21300000, guid: e3c7a934e57cabc46bbaccdd02db6478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -741,23 +992,49 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036199029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 762, y: 201, z: 0}
+=======
+  m_LocalPosition: {x: 922, y: 439, z: 0}
+>>>>>>> parent of 5f525ff... merging
   m_LocalScale: {x: 17.688246, y: 12.487127, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &2036199032
 MonoBehaviour:
+=======
+--- !u!50 &2036199032
+Rigidbody2D:
+  serializedVersion: 4
+>>>>>>> parent of 5f525ff... merging
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036199029}
+<<<<<<< HEAD
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+=======
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+>>>>>>> parent of 5f525ff... merging
 --- !u!1 &2142864465
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +1095,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
+<<<<<<< HEAD
   orthographic size: 684.2716
+=======
+  orthographic size: 159.60419
+>>>>>>> parent of 5f525ff... merging
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -841,8 +1122,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2142864465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 0, y: 0, z: 0}
+=======
+  m_LocalPosition: {x: 75.9, y: 11.6, z: -10}
+  m_LocalScale: {x: 1.3398038, y: 1.1090257, z: 1}
+>>>>>>> parent of 5f525ff... merging
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

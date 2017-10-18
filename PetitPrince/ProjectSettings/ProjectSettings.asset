@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
+<<<<<<< HEAD
   productGUID: 8da6f44378e9e4c71ac78b911ab5b8c1
+=======
+  productGUID: 81f928222b9ed0f47be476b6713a15cf
+>>>>>>> parent of 5f525ff... merging
   AndroidProfiler: 0
   defaultScreenOrientation: 4
   targetDevice: 2
@@ -206,7 +210,11 @@ PlayerSettings:
   iOSURLSchemes: []
   iOSBackgroundModes: 0
   iOSMetalForceHardShadows: 0
+<<<<<<< HEAD
   metalEditorSupport: 0
+=======
+  metalEditorSupport: 1
+>>>>>>> parent of 5f525ff... merging
   metalAPIValidation: 1
   iOSRenderExtraFrameOnPause: 0
   appleDeveloperTeamID: 
@@ -407,7 +415,11 @@ PlayerSettings:
   ps4DownloadDataSize: 0
   ps4GarlicHeapSize: 2048
   ps4ProGarlicHeapSize: 2560
+<<<<<<< HEAD
   ps4Passcode: 5PN2qmWqBlQ9wQj99nsQzldVI5ZuGXbE
+=======
+  ps4Passcode: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
+>>>>>>> parent of 5f525ff... merging
   ps4pnSessions: 1
   ps4pnPresence: 1
   ps4pnFriends: 1
@@ -453,7 +465,11 @@ PlayerSettings:
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
   psp2PatchOriginalPackage: 
+<<<<<<< HEAD
   psp2PackagePassword: WRK5RhRXdCdG5nG5azdNMK66MuCV6GXi
+=======
+  psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
+>>>>>>> parent of 5f525ff... merging
   psp2KeystoneFile: 
   psp2MemoryExpansionMode: 0
   psp2DRMType: 0
