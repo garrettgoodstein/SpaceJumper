@@ -7,8 +7,8 @@ using System.Runtime.InteropServices;
 // SpaceWanderer 
 // October 19th, 2017
 // Team Anhagama 
+//Haimeng's test
 
-//Github test Matthew Bonazzoli
 public class PlanetMoveDemo : MonoBehaviour {
 	float xSpeed;
 	float ySpeed;
