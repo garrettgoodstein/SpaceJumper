@@ -1,13 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NUnit.Framework.Internal.Filters;
 using System.Runtime.InteropServices;
 
 // SpaceWanderer 
 // October 19th, 2017
 // Team Anhagama 
-//Haimeng's test
 
 public class PlanetMoveDemo : MonoBehaviour {
 	float xSpeed;
