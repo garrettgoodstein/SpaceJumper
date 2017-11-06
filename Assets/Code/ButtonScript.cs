@@ -18,6 +18,11 @@ public class ButtonScript : MonoBehaviour {
 		Application.LoadLevel("About");
 	}
 
+	public void LoadMainMenu()
+	{
+		Application.LoadLevel("SpaceWandererTestScene");
+	}
+
 	// Use this for initialization
 	void Start () {
 		
