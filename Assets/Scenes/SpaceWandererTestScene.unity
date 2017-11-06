@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746999516}
   m_LocalRotation: {x: -0, y: -0, z: 0.040004767, w: -0.9991995}
-  m_LocalPosition: {x: -3057.5203, y: -77.67949, z: 0}
+  m_LocalPosition: {x: -1957, y: -950, z: 0}
   m_LocalScale: {x: 16.208286, y: 13.830461, z: 0.86999995}
   m_Children: []
   m_Father: {fileID: 0}
@@ -476,12 +476,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854002917}
   m_LocalRotation: {x: -0, y: -0, z: 0.0015440919, w: 0.9999988}
-  m_LocalPosition: {x: -2626.08, y: -543.34937, z: 0}
-  m_LocalScale: {x: 111.63438, y: 115.505615, z: 0.38343173}
-  m_Children:
-  - {fileID: 966755214}
+  m_LocalPosition: {x: -3018, y: -1826, z: 0}
+  m_LocalScale: {x: 1700, y: 500, z: 0.7707339}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
 --- !u!114 &854002920
 MonoBehaviour:
@@ -489,7 +488,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 854002917}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
   m_Name: 
@@ -585,7 +584,7 @@ RectTransform:
   - {fileID: 1566382101}
   - {fileID: 1086266372}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -667,12 +666,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966755212}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.6570301, y: 1.7156461, z: 0}
-  m_LocalScale: {x: 0.54888546, y: 0.2659121, z: 2.6080263}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0015440919, w: 0.9999988}
+  m_LocalPosition: {x: -2873, y: -1186, z: 0}
+  m_LocalScale: {x: 69.70358, y: 40.149616, z: 2.0100942}
   m_Children: []
-  m_Father: {fileID: 854002919}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076059239
 GameObject:
@@ -996,7 +995,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1172225432}
   m_LocalRotation: {x: -0, y: -0, z: 0.0015440919, w: 0.9999988}
-  m_LocalPosition: {x: -4133, y: 76, z: 0}
+  m_LocalPosition: {x: -3285, y: -89, z: 0}
   m_LocalScale: {x: 87.24056, y: 92.577156, z: 1.2111294}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1079,11 +1078,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1291829571}
   m_LocalRotation: {x: -0, y: -0, z: 0.0015440919, w: 0.9999988}
-  m_LocalPosition: {x: -3454.1968, y: -506.90656, z: 0}
+  m_LocalPosition: {x: -4428, y: -506.90656, z: 0}
   m_LocalScale: {x: 110.585175, y: 115.03745, z: 0.6117158}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
 --- !u!114 &1291829574
 MonoBehaviour:
@@ -1156,7 +1155,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1566382100
 GameObject:
@@ -1270,7 +1269,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017730404
 GameObject:
@@ -1406,7 +1405,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2036199029}
   m_LocalRotation: {x: -0, y: -0, z: 0.0015440919, w: 0.9999988}
-  m_LocalPosition: {x: -2421.752, y: -1.7157669, z: 0}
+  m_LocalPosition: {x: -1753, y: -40, z: 0}
   m_LocalScale: {x: 17.532196, y: 12.955673, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1461,7 +1460,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142864465
 GameObject:

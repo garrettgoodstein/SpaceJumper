@@ -12,25 +12,28 @@ public class PlanetMoveDemo : MonoBehaviour {
 	float ySpeed;
 	// Use this for initialization
 	void Start () {
-		xSpeed = 1f;
-		ySpeed = 1f;
-		
+		if (transform.position.x > 0) {
+			xSpeed = -1.2f;
+			ySpeed = -0.5f;
+		} 
+		else {
+			xSpeed = 1f;
+			ySpeed = -0.5f;
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// X axis
-		if (transform.position.x <= -1100f || transform.position.x >= 1100f) {
-			xSpeed = -xSpeed;
-		}
+//		if (transform.position.x <= -1100f || transform.position.x >= 1100f) {
+//			xSpeed = -xSpeed;
+//		}
 		// Y axis
-		if (transform.position.y <= -470f || transform.position.y >= 470f) {
-			ySpeed = -ySpeed;
-		}
+//		if (transform.position.y <= -470f || transform.position.y >= 470f) {
+//			ySpeed = -ySpeed;
+//		}
 		transform.Translate(xSpeed, ySpeed, 0f);
-		//transform.localScale += new Vector3 (1f, 1f, 0f);
-
-		//transform.RotateAround (0f,0f,0f);
-			
+		transform.localScale += new Vector3 (0.03f, 0.03f, 0f);
 	}
 }
