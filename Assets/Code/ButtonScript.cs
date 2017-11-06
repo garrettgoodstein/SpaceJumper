@@ -23,6 +23,11 @@ public class ButtonScript : MonoBehaviour {
 		Application.LoadLevel("SpaceWandererTestScene");
 	}
 
+	public void GameQuit()
+	{
+		Application.Quit();
+	}
+
 	// Use this for initialization
 	void Start () {
 		
