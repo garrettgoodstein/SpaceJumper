@@ -9,7 +9,7 @@ using System.Runtime.InteropServices;
 
 public class PlanetMoveDemo : MonoBehaviour {
 	float xSpeed;
-	float ySpeed;-
+	float ySpeed;
 	// Use this for initialization
 	void Start () {
 		if (transform.position.x > 0) {
