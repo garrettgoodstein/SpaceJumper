@@ -6,5 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/New Scene.unity
+    path: Assets/Scenes/SpaceWandererTestScene.unity
+    guid: 2695d99190cac6f4a8df429d6a4910e2
+  - enabled: 1
+    path: Assets/Scenes/New Scene.unity
     guid: a23dcf3a7889cb447a69275708a09445
+  - enabled: 1
+    path: Assets/Scenes/GameScene.unity
+    guid: d448beca67a4da84ca86f1df0f5aaa17
+  - enabled: 1
+    path: Assets/Scenes/About.unity
+    guid: 2c88da3cc7979fd44b27e05541f92441
