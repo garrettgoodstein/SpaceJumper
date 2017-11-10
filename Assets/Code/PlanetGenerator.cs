@@ -10,7 +10,18 @@ public class PlanetGenerator : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 5; i++) {
 			//instantiates a planet with random position vector
-			Instantiate (planet, new Vector3(Random.Range(-50,50), Random.Range(-50,50), Random.Range(50, 800)), transform.rotation);
+			//need to play around with ranges for vector instantiation
+//			if(i == 1){
+//				planet.GetComponent<SpriteRenderer> ().sharedMaterial.mainTexture = Resources.Load ("Images/Planet5", typeof(Texture2D)) as Texture2D;
+//			}
+			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-50,50), Random.Range(-50,50), Random.Range(50, 800)), transform.rotation) as GameObject;
+
+			if (i%2 == 0) {
+				planet_clone.GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Images/Planet2_tosend", typeof (Sprite)) as Sprite;
+			}
+			//Use Sprite Create(Texture2D texture, Rect rect, Vector2 pivot, float pixelsPerUnit = 100.0f, 
+			//  uint extrude = 0, SpriteMeshType meshType = SpriteMeshType.Tight, Vector4 border = Vector4.zero)
+			// use the AlphaBlend method to get the new texture
 		}
 	}
 	
