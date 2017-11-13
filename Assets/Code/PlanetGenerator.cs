@@ -8,13 +8,13 @@ public class PlanetGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 200; i++) {
 			//instantiates a planet with random position vector
 			//need to play around with ranges for vector instantiation
 //			if(i == 1){
 //				planet.GetComponent<SpriteRenderer> ().sharedMaterial.mainTexture = Resources.Load ("Images/Planet5", typeof(Texture2D)) as Texture2D;
 //			}
-			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-50,50), Random.Range(-50,50), Random.Range(50, 800)), transform.rotation) as GameObject;
+			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(50, 800)), transform.rotation) as GameObject;
 
 			if (i%2 == 0) {
 				planet_clone.GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Images/Planet2_tosend", typeof (Sprite)) as Sprite;
