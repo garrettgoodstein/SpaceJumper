@@ -7,18 +7,22 @@ using System.Runtime.InteropServices;
 // October 19th, 2017
 // Team Anhagama 
 
-public class PlanetMoveDemo : MonoBehaviour {
+public class PlanetMovement : MonoBehaviour {
 	float xSpeed;
 	float ySpeed;
+	float zSpeed;
+
 	// Use this for initialization
 	void Start () {
 		if (transform.position.x > 0) {
 			xSpeed = -1.2f;
 			ySpeed = -0.5f;
+			zSpeed = -0.5f;
 		} 
 		else {
 			xSpeed = 1f;
 			ySpeed = -0.5f;
+			zSpeed = -0.5f; 
 		}
 
 	}
@@ -33,7 +37,7 @@ public class PlanetMoveDemo : MonoBehaviour {
 //		if (transform.position.y <= -470f || transform.position.y >= 470f) {
 //			ySpeed = -ySpeed;
 //		}
-		transform.Translate(xSpeed, ySpeed, 0f);
-		transform.localScale += new Vector3 (0.03f, 0.03f, 0f);
+		transform.Translate(xSpeed, ySpeed, zSpeed);
+		transform.localScale += new Vector3 (0.03f, 0.03f, 0.03f);
 	}
 }
