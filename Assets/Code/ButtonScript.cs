@@ -6,36 +6,11 @@ using UnityEngine.SceneManagement;
 // SpaceWanderer 
 // November 5th, 2017
 // Team Anhagama 
+// This class allows button to have behavior that would allow them to load certain scenes by text. 
 
-public class ButtonScript : MonoBehaviour {
+public class ButtonScriptBehavior : MonoBehaviour {
 
-	public void LoadScene()
-	{
-		SceneManager.LoadScene("GameScene");
-	}
-
-	public void LoadAbout()
-	{
-		SceneManager.LoadScene("About");
-	}
-
-	public void LoadMainMenu()
-	{
-		SceneManager.LoadScene("SpaceWandererTestScene");
-	}
-
-	public void GameQuit()
-	{
-		Application.Quit();
-	}
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+	public void LoadScenes(string sceneName) {
+		SceneManager.LoadScene (sceneName);
 	}
 }
