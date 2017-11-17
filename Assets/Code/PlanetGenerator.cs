@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetGenerator : MonoBehaviour {
-	
 	public GameObject planet;
 
 	// Use this for initialization
 	void Start () {
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 1; i++) {
 			//instantiates a planet with random position vector
 			//need to play around with ranges for vector instantiation
-//			if(i == 1){
-//				planet.GetComponent<SpriteRenderer> ().sharedMaterial.mainTexture = Resources.Load ("Images/Planet5", typeof(Texture2D)) as Texture2D;
-//			}
-			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-50,50), Random.Range(-50,50), Random.Range(50, 800)), transform.rotation) as GameObject;
+//			
+//			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(50, 800)), transform.rotation) as GameObject;
 
-			if (i%2 == 0) {
-				planet_clone.GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Images/Planet2_tosend", typeof (Sprite)) as Sprite;
-			}
+//			if (i%2 == 0) {
+//				planet_clone.GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Images/Planet1_tosend", typeof (Sprite)) as Sprite;
+//			}
 			//Use Sprite Create(Texture2D texture, Rect rect, Vector2 pivot, float pixelsPerUnit = 100.0f, 
 			//  uint extrude = 0, SpriteMeshType meshType = SpriteMeshType.Tight, Vector4 border = Vector4.zero)
 			// use the AlphaBlend method to get the new texture
+
+			Texture2D blend = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
+			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(0, 0, 100), transform.rotation) as GameObject;
+			planet_clone.GetComponent<SpriteRenderer> ().sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.5f, 0.5f), 10.0f) as Sprite;
 		}
 	}
 	

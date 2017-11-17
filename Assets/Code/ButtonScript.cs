@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // SpaceWanderer 
 // November 5th, 2017
@@ -10,17 +11,17 @@ public class ButtonScript : MonoBehaviour {
 
 	public void LoadScene()
 	{
-		Application.LoadLevel("GameScene");
+		SceneManager.LoadScene("GameScene");
 	}
 
 	public void LoadAbout()
 	{
-		Application.LoadLevel("About");
+		SceneManager.LoadScene("About");
 	}
 
 	public void LoadMainMenu()
 	{
-		Application.LoadLevel("SpaceWandererTestScene");
+		SceneManager.LoadScene("SpaceWandererTestScene");
 	}
 
 	public void GameQuit()

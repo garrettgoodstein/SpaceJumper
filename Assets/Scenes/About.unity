@@ -229,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9632353, g: 0.9227912, b: 0.83574826, a: 1}
+  m_Color: {r: 1, g: 0.7154161, b: 0.102941155, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -249,7 +249,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Space Wanderer is a mobile game developed by three Macalester College students
+  m_Text: "Space Wanderer is a mobile game developed by four Macalester College students
     in 2017 for their Software Design and Development course. The game is about endless
     space exploration to foster a meditative experience. It has no objectives, goals,
     or scores. Just plain, good old exploration. We hope you enjoy!\n\n\n                               Sincerely,\n\t\t\t\t\t\tThe
