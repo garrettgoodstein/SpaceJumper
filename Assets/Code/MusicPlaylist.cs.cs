@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicPlaylist.cs : MonoBehaviour {
+public class MusicPlaylist : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
