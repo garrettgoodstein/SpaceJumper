@@ -11,7 +11,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		transform.localScale = constantScale;
 		if (Input.touchCount > 0) {
 			// The screen has been touched so store the touch
 			Touch touch = Input.GetTouch (0);
