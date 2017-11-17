@@ -16,12 +16,18 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			Touch touch = Input.GetTouch (0);
 			var clickedPosition = touch.position;
 
-			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved ) || Physics.CheckSphere(clickedPosition, 100)) {
+			Vector3 touchPos = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y));
+			Vector2 mousePos2D = new Vector3(touchPos.x,touchPos.y);
+
+			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+			if (hit.collider != null) {
+				if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved ) {
 				// If the finger is on the screen, move the object smoothly to the touch position
 				Vector3 touchPosition = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y));
 				transform.position = Vector3.Lerp (transform.position, touchPosition, Time.deltaTime); 
 
 			}
 		}
+}
 }
 }
