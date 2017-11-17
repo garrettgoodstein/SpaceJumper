@@ -31,6 +31,8 @@ public class PlanetGenerator : MonoBehaviour {
 		
 	}
 
+
+	// make sure this code is credited https://answers.unity.com/questions/1008802/merge-multiple-png-images-one-on-top-of-the-other.html
 	public static Texture2D AlphaBlend(Texture2D aBottom, Texture2D aTop)
 	{
 		if (aBottom.width != aTop.width || aBottom.height != aTop.height)
