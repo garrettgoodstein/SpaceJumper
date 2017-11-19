@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetTouchBehavior : MonoBehaviour {
-	public float speed = 0.1F;
+	public float speed = 0.0F;
 	public Vector3 constantScale = new Vector3 (62, 30);
 
 	// Use this for initialization
@@ -19,15 +19,30 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			Vector3 touchPos = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y));
 			Vector2 mousePos2D = new Vector3(touchPos.x,touchPos.y);
 
-			RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
-			if (hit.collider != null) {
-				if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved ) {
-				// If the finger is on the screen, move the object smoothly to the touch position
-				Vector3 touchPosition = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y));
-				transform.position = Vector3.Lerp (transform.position, touchPosition, Time.deltaTime); 
+			var princePositionX = GameObject.FindGameObjectWithTag("Prince").transform.position.x;
+			var princePositionY = GameObject.FindGameObjectWithTag ("Prince").transform.position.y;
+			var princePositionZ = GameObject.FindGameObjectWithTag ("Prince").transform.position.z;
 
-			}
+
+			var planetPositionX = GameObject.FindGameObjectWithTag("Planet").transform.position.x;
+			var planetPositionY = GameObject.FindGameObjectWithTag("Planet").transform.position.y;
+			var planetPositionZ = GameObject.FindGameObjectWithTag("Planet").transform.position.z;
+
+			var touchDifferenceX = princePositionX - planetPositionX;
+			var touchDifferenceY = princePositionY - planetPositionY;
+			var touchDifferenceZ = princePositionZ - planetPositionZ;
+
+			print ("touchX " + touchDifferenceX);
+			print ("touchY " + touchDifferenceY);
+			print ("touchZ " + touchDifferenceZ);
+
+			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved )) {
+			// If the finger is on the screen, move the object smoothly to the touch position
+				Vector3 touchPosition = Camera.main.ScreenToWorldPoint (new Vector3 (planetPositionX, planetPositionY));
+				transform.position = Vector3.Lerp (transform.position, touchPosition, Time.deltaTime); 
+			
 		}
+		}
+	}
 }
-}
-}
+

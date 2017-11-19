@@ -134,7 +134,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574808215
 GameObject:
@@ -297,7 +297,7 @@ RectTransform:
   m_Children:
   - {fileID: 2056176823}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 746999517}
   m_Layer: 0
   m_Name: TreePlanet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,13 +380,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 746999516}
-  m_LocalRotation: {x: -0, y: -0, z: 0.04154757, w: -0.9991365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1055.3, y: 443.3, z: 0}
-  m_LocalScale: {x: 7.66604, y: 6.7918615, z: 1}
+  m_LocalScale: {x: 7.66604, y: 6.7918615, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1084.762}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854002917
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 854002920}
   m_Layer: 0
   m_Name: LimePlanet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -454,10 +454,10 @@ Transform:
   m_GameObject: {fileID: 854002917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 91, y: -1069, z: 0}
-  m_LocalScale: {x: 1700, y: 500, z: 0.38343173}
+  m_LocalScale: {x: 1700, y: 500, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &854002920
 MonoBehaviour:
@@ -484,7 +484,7 @@ GameObject:
   - component: {fileID: 966755217}
   m_Layer: 0
   m_Name: LittlePrince
-  m_TagString: Player
+  m_TagString: Prince
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -539,10 +539,10 @@ Transform:
   m_GameObject: {fileID: 966755212}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 58, y: -430, z: 0}
-  m_LocalScale: {x: 61.819878, y: 29.603542, z: 1}
+  m_LocalScale: {x: 200, y: 100, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &966755215
 MonoBehaviour:
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 1172225435}
   m_Layer: 0
   m_Name: GreenPlanet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -724,7 +724,7 @@ Transform:
   m_LocalScale: {x: 52.61165, y: 50.15065, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1172225435
 MonoBehaviour:
@@ -798,7 +798,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281977173
 GameObject:
@@ -838,7 +838,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1291829571
 GameObject:
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 1291829574}
   m_Layer: 0
   m_Name: PotatoChipPlanet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -907,10 +907,10 @@ Transform:
   m_GameObject: {fileID: 1291829571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1552.7, y: 806.7, z: 1}
-  m_LocalScale: {x: 70.5702, y: 70.87775, z: 1}
+  m_LocalScale: {x: 70.5702, y: 70.87775, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1291829574
 MonoBehaviour:
@@ -935,7 +935,7 @@ GameObject:
   - component: {fileID: 2036199032}
   m_Layer: 0
   m_Name: TropicalPlanet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -990,10 +990,10 @@ Transform:
   m_GameObject: {fileID: 2036199029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1428.5, y: 809.5, z: 1}
-  m_LocalScale: {x: 6.635438, y: 6.34069, z: 0.87}
+  m_LocalScale: {x: 6.635438, y: 6.34069, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2036199032
 MonoBehaviour:
@@ -1193,11 +1193,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2120726559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 173, y: -92, z: 0}
-  m_LocalScale: {x: 152.8322, y: 135.73721, z: 1}
+  m_LocalPosition: {x: 1069, y: -46, z: 0}
+  m_LocalScale: {x: 421.07968, y: 349.04565, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2142864465
 GameObject:
@@ -1257,7 +1257,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 54.96278
+  field of view: 64.25818
   orthographic: 0
   orthographic size: 754.3195
   m_Depth: -1
@@ -1281,10 +1281,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2142864465}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1000}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.000091552734, z: -1000}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
