@@ -336,7 +336,6 @@ GameObject:
   m_Component:
   - component: {fileID: 746999519}
   - component: {fileID: 746999518}
-  - component: {fileID: 746999517}
   m_Layer: 0
   m_Name: Planet2_tosend (2)
   m_TagString: Untagged
@@ -344,17 +343,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &746999517
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 746999516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &746999518
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -419,7 +407,6 @@ GameObject:
   m_Component:
   - component: {fileID: 854002919}
   - component: {fileID: 854002918}
-  - component: {fileID: 854002920}
   m_Layer: 0
   m_Name: planet7
   m_TagString: Untagged
@@ -482,17 +469,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
---- !u!114 &854002920
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 854002917}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &908939864
 GameObject:
   m_ObjectHideFlags: 0
@@ -914,7 +890,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1172225434}
   - component: {fileID: 1172225433}
-  - component: {fileID: 1172225435}
   m_Layer: 0
   m_Name: planet6
   m_TagString: Untagged
@@ -977,17 +952,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
---- !u!114 &1172225435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1172225432}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1291829571
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +961,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1291829573}
   - component: {fileID: 1291829572}
-  - component: {fileID: 1291829574}
   m_Layer: 0
   m_Name: Planet5
   m_TagString: Untagged
@@ -1060,17 +1023,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
---- !u!114 &1291829574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1291829571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1307321792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,7 +1276,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2036199031}
   - component: {fileID: 2036199030}
-  - component: {fileID: 2036199032}
   m_Layer: 0
   m_Name: Planet1_tosend (3)
   m_TagString: Untagged
@@ -1387,17 +1338,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.177}
---- !u!114 &2036199032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2036199029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385354715df5b43509dbcf72ca1e0489, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2057337860
 GameObject:
   m_ObjectHideFlags: 0
