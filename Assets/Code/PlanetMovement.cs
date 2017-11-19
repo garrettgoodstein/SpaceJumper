@@ -15,14 +15,14 @@ public class PlanetMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (transform.position.x > 0) {
-			xSpeed = -0.5f;
-			ySpeed = -0.5f;
-			zSpeed = -0.5f;
+			xSpeed = -0.1f;
+			ySpeed = -0.1f;
+			zSpeed = -1f;
 		} 
 		else {
-			xSpeed = 0.5f;
-			ySpeed = -0.5f;
-			zSpeed = -0.5f; 
+			xSpeed = 0.1f;
+			ySpeed = -0.1f;
+			zSpeed = -1f; 
 		}
 
 	}
@@ -38,6 +38,7 @@ public class PlanetMovement : MonoBehaviour {
 //			ySpeed = -ySpeed;
 //		}
 		transform.Translate(xSpeed, ySpeed, zSpeed);
-		transform.localScale += new Vector3 (0.05f, 0.05f, 0.05f);
+		transform.localScale += new Vector3 (0.00f, 0.00f, 0);
 	}
+
 }

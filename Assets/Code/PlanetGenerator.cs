@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class PlanetGenerator : MonoBehaviour {
 	public GameObject planet;
-
+	public GameObject planet_clone;
+	SpriteRenderer planetRenderer;
 	// Use this for initialization
 	void Start () {
+//		Debug.Log ("enabled: "+enabled);
+//		enabled = false;
+//		Debug.Log ("enabled: "+enabled);
 		for (int i = 0; i < 1; i++) {
 			//instantiates a planet with random position vector
 			//need to play around with ranges for vector instantiation
@@ -21,14 +25,35 @@ public class PlanetGenerator : MonoBehaviour {
 			// use the AlphaBlend method to get the new texture
 
 			Texture2D blend = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
-			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(0, 0, 100), transform.rotation) as GameObject;
-			planet_clone.GetComponent<SpriteRenderer> ().sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.5f, 0.5f), 10.0f) as Sprite;
+			planet_clone = (GameObject) Instantiate (planet, new Vector3(10,10,1500), transform.rotation) as GameObject;
+
+			planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
+
+			//planet_clone.GetComponent<SpriteRenderer> ().sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.5f, 0.5f), 10.0f) as Sprite;
+
+			planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+
+//			enabled = true;
+//			Debug.Log ("enabled: "+enabled);
 		}
+	}
+	void Update(){
+		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+
+	// Having issue where two false values are recorded after start has finished running
+	void LateUpdate () {
+//		Debug.Log ("Is visible: "+planetRenderer.isVisible);
+//		if (!planetRenderer.isVisible) {
+//			Destroy (planet_clone);
+//			planet_clone = (GameObject) Instantiate (planet, new Vector3(100, 50, 200), transform.rotation) as GameObject;
+//			Texture2D blend = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
+//			planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.5f, 0.5f), 10.0f) as Sprite;
+//			enabled = true;
+//		}
+
 	}
 
 
