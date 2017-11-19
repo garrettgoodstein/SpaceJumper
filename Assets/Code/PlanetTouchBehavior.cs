@@ -24,18 +24,21 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			var princePositionZ = GameObject.FindGameObjectWithTag ("Prince").transform.position.z;
 
 
-			var touchPositionX = touchPos.x;
-			var touchPositionY = touchPos.y;
-			var touchPositionZ = touchPos.z;
+			var planetPositionX = GameObject.FindGameObjectWithTag("Planet").transform.position.x;
+			var planetPositionY = GameObject.FindGameObjectWithTag("Planet").transform.position.y;
+			var planetPositionZ = GameObject.FindGameObjectWithTag("Planet").transform.position.z;
 
-			var touchDifference = touchPositionZ - princePositionZ;
-			print (touchPositionY);
-//			print (princePosition);
+			var touchDifferenceX = princePositionX - planetPositionX;
+			var touchDifferenceY = princePositionY - planetPositionY;
+			var touchDifferenceZ = princePositionZ - planetPositionZ;
 
-			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved ) && touchDifference < -800) {
+			print ("touchX " + touchDifferenceX);
+			print ("touchY " + touchDifferenceY);
+			print ("touchZ " + touchDifferenceZ);
+
+			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved )) {
 			// If the finger is on the screen, move the object smoothly to the touch position
-				transform.localScale += new Vector3(0.0F, 0, 10);
-				Vector3 touchPosition = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y));
+				Vector3 touchPosition = Camera.main.ScreenToWorldPoint (new Vector3 (planetPositionX, planetPositionY));
 				transform.position = Vector3.Lerp (transform.position, touchPosition, Time.deltaTime); 
 			
 		}
