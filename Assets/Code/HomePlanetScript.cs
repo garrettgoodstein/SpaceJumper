@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // October 19th, 2017
 // Team Anhagama 
 
-public class PlanetMovement : MonoBehaviour {
+public class HomePlanetScript : MonoBehaviour {
 	float xSpeed;
 	float ySpeed;
 	float zSpeed;
@@ -15,13 +15,13 @@ public class PlanetMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		if (transform.position.x > 0) {
-			xSpeed = -0.5f;
-			ySpeed = -0.5f;
+			xSpeed = 0.5f;
+			ySpeed = 0.5f;
 			zSpeed = 0;
 		} 
 		else {
 			xSpeed = 0.5f;
-			ySpeed = -0.5f;
+			ySpeed = 0.5f;
 			zSpeed = 0; 
 
 		}
