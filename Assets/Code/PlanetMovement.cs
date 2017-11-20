@@ -12,19 +12,22 @@ public class PlanetMovement : MonoBehaviour {
 	float ySpeed;
 	float zSpeed;
 
+
 	// Use this for initialization
 	void Start () {
-		if (transform.position.x > 0) {
-			xSpeed = -0.01f;
-			ySpeed = -0.01f;
-			zSpeed = 0.0f;
-		} 
-		else {
-			xSpeed = 0.01f;
-			ySpeed = -0.01f;
-			zSpeed = 0.0f; 
+//		if (transform.position.x > 0) {
+//			xSpeed = -0.01f;
+//			ySpeed = -0.01f;
+//			zSpeed = 0.0f;
+//		} 
+//		else {
+//			xSpeed = 0.01f;
+//			ySpeed = -0.01f;
+//			zSpeed = 0.0f; 
+//
+//		}
 
-		}
+		findTrajectory ();
 
 	}
 
@@ -40,5 +43,24 @@ public class PlanetMovement : MonoBehaviour {
 		//		}
 		transform.Translate(xSpeed, ySpeed, zSpeed);
 		transform.localScale += new Vector3 (0.00f, 0.00f, 0);
+	}
+
+	void findTrajectory(){
+		float currX = transform.position.x;
+		float currY = transform.position.y;
+		float currZ = transform.position.z;
+
+//		xSpeed = 0.01f * currX;
+//		ySpeed = 0.01f * currY;
+
+		xSpeed = 0.0f;
+		ySpeed = 0.0f;
+		zSpeed = -0.1f;
+
+
+
+
+
+	
 	}
 }
