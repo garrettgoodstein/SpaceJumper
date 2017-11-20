@@ -39,6 +39,6 @@ public class PlanetMovement : MonoBehaviour {
 		//			ySpeed = -ySpeed;
 		//		}
 		transform.Translate(xSpeed, ySpeed, zSpeed);
-		transform.localScale += new Vector3 (0.1f, 0.1f, 0.1f);
+		transform.localScale += new Vector3 (0.05f, 0.05f, 0.05f);
 	}
 }
