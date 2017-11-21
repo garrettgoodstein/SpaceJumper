@@ -323,8 +323,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Space Wanderer is a meditative game developed by four Macalester College
     students in 2017 for their Software Design and Development course. Play this game
-    and discover wonderdul planets in space with the little prince. We hope you enjoy
-    meditative experience. \n\n                                                        \t\t\t\t
+    and discover wonderful planets in space with the little prince. We hope you enjoy
+    the meditative experience. \n\n                                                        \t\t\t\t
     Sincerely,\n\t\t          \t\t\t\t\t                         Team Anhagama"
 --- !u!222 &440123853
 CanvasRenderer:
