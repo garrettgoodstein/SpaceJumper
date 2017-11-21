@@ -168,8 +168,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000076293945, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000015258789, y: 0}
+  m_SizeDelta: {x: -0.000061035, y: 0}
   m_Pivot: {x: 0.2924029, y: 0.5756109}
 --- !u!114 &574808217
 MonoBehaviour:
@@ -301,8 +301,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1550, y: -2073}
-  m_SizeDelta: {x: 305.5, y: 54.6}
+  m_AnchoredPosition: {x: 1054.0001, y: -2205.7024}
+  m_SizeDelta: {x: 305.5, y: 112}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &746999516
 GameObject:
@@ -470,6 +470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e0fca4977edf584cb46ccdfa2993266, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 0
+  ySpeed: 0
+  zSpeed: 0
 --- !u!1 &889042408
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,8 +538,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889042408}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 427, y: -677, z: 0}
-  m_LocalScale: {x: 86.637146, y: 92.32435, z: 0}
+  m_LocalPosition: {x: 363, y: -848, z: 0}
+  m_LocalScale: {x: 134.41997, y: 161.51405, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1183,8 +1186,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 24.863708, y: -243.324}
-  m_SizeDelta: {x: 257.9, y: 120.8}
+  m_AnchoredPosition: {x: 92.235, y: -282.7}
+  m_SizeDelta: {x: 305.5, y: 136.5}
   m_Pivot: {x: 0.8019144, y: -1.5142714}
 --- !u!114 &2056176824
 MonoBehaviour:
@@ -1400,8 +1403,8 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 124.54966
-  orthographic: 1
+  field of view: 147.5271
+  orthographic: 0
   orthographic size: 1962.1246
   m_Depth: -1
   m_CullingMask:
