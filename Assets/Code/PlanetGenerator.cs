@@ -11,7 +11,7 @@ public class PlanetGenerator : MonoBehaviour {
 //		Debug.Log ("enabled: "+enabled);
 //		enabled = false;
 //		Debug.Log ("enabled: "+enabled);
-		for (int i = 0; i < 6; i++) {
+		for (int i = 0; i < 1; i++) {
 			//instantiates a planet with random position vector
 			//need to play around with ranges for vector instantiation
 //			
@@ -25,7 +25,8 @@ public class PlanetGenerator : MonoBehaviour {
 			// use the AlphaBlend method to get the new texture
 
 			Texture2D blend = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
-			planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(50, 1800)), transform.rotation) as GameObject;
+			//planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(50, 1800)), transform.rotation) as GameObject;
+			planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
 
 			planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
 
