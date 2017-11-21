@@ -286,7 +286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80.94, y: -70.887}
+  m_AnchoredPosition: {x: -20.94, y: -70.887}
   m_SizeDelta: {x: 666.13, y: 602.52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440123852
@@ -301,7 +301,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9191176, g: 0.37830138, b: 0.027999993, a: 1}
+  m_Color: {r: 0.8014706, g: 0.297, b: 0.058931667, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -325,7 +325,7 @@ MonoBehaviour:
     students in 2017 for their Software Design and Development course. Play this game
     and discover wonderdul planets in space with the little prince. We hope you enjoy
     meditative experience. \n\n                                                        \t\t\t\t
-    Sincerely,\n\t\t          \t\t\t\t\t                             Anhangama"
+    Sincerely,\n\t\t          \t\t\t\t\t                         Team Anhagama"
 --- !u!222 &440123853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
-  m_Color: {r: 0.9727538, g: 0.9777249, b: 0.9705882, a: 1}
+  m_Color: {r: 0.9705882, g: 0.9705882, b: 0.9705882, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -912,9 +912,9 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.991, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.99264705, g: 0.622, b: 0.109483115, a: 1}
     m_HighlightedColor: {r: 0.972, g: 0.978, b: 0.147, a: 1}
-    m_PressedColor: {r: 0.9852941, g: 0.5323245, b: 0.046999983, a: 1}
+    m_PressedColor: {r: 0.9852941, g: 0.328, b: 0.046999983, a: 1}
     m_DisabledColor: {r: 0.066, g: 0.78431374, b: 0.941, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
