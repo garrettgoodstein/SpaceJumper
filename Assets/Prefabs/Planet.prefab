@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212576107230093442}
   - component: {fileID: 114375248691152648}
   - component: {fileID: 54015062256840450}
+  - component: {fileID: 114003302066267110}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -57,13 +58,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114375248691152648
+--- !u!114 &114003302066267110
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1518279009513502}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 012f9af4e3f4a0a499a2bc86216d79d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114375248691152648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1518279009513502}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02046ffea2875c143999e1714aece44c, type: 3}
   m_Name: 
