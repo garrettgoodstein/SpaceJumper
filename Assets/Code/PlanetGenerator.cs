@@ -3,43 +3,64 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetGenerator : MonoBehaviour {
+	
 	public GameObject planet;
-	public GameObject planet_clone;
+	GameObject planet_clone;
+
 	SpriteRenderer planetRenderer;
+	Texture2D[] planetTextures;
+
 	// Use this for initialization
 	void Start () {
-//		Debug.Log ("enabled: "+enabled);
-//		enabled = false;
-//		Debug.Log ("enabled: "+enabled);
-		for (int i = 0; i < 1; i++) {
-			//instantiates a planet with random position vector
-			//need to play around with ranges for vector instantiation
-//			
-//			GameObject planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(50, 800)), transform.rotation) as GameObject;
+		planetTextures = new Texture2D[2];
+		loadTextures ();
 
-//			if (i%2 == 0) {
-//				planet_clone.GetComponent<SpriteRenderer> ().sprite = Resources.Load ("Images/Planet1_tosend", typeof (Sprite)) as Sprite;
-//			}
-			//Use Sprite Create(Texture2D texture, Rect rect, Vector2 pivot, float pixelsPerUnit = 100.0f, 
-			//  uint extrude = 0, SpriteMeshType meshType = SpriteMeshType.Tight, Vector4 border = Vector4.zero)
-			// use the AlphaBlend method to get the new texture
-
-			Texture2D blend = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
-			//planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-100,100), Random.Range(-100,100), Random.Range(50, 1800)), transform.rotation) as GameObject;
-			planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
-
-			planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
-
-			//planet_clone.GetComponent<SpriteRenderer> ().sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.5f, 0.5f), 10.0f) as Sprite;
-
-			planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
-
-//			enabled = true;
-//			Debug.Log ("enabled: "+enabled);
+		for (int i = 0; i < 15; i++) {
+			createNewPlanet ();
 		}
+
 	}
+
+
 	void Update(){
+		if (!planetRenderer.isVisible) {
+			//TODO need to fix the destroy method so the object disappears
+		}
+
+	}
+
+	//Add a method that creates a new planet so it can be used both in the start and to check if a planet is destroyed
+
+	public void createNewPlanet(){
+		//Texture2D blend  = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
+
+		Texture2D blend = blendTextures ();
+
+		planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-800,800), Random.Range(-800,800), Random.Range(1000, 1900)), transform.rotation) as GameObject;
+		//planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
+		planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
+		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+	
+	}
+
+	void loadTextures(){
+		//LoadAll not getting the images in file and returning as list *need to check documentation*
+		//planetTextures = Resources.LoadAll ("PlanetTextures", typeof(Texture2D[])) as Texture2D[];
+
+		planetTextures [0] = Resources.Load ("PlanetTextures/Test2", typeof(Texture2D)) as Texture2D;
+		planetTextures [1] = Resources.Load ("PlanetTextures/Test1", typeof(Texture2D)) as Texture2D;
+	}
+
+	//Blends Textures together using AlphaBlend and returns the resulting Texture2D object
+	Texture2D blendTextures(){
 		
+		Texture2D baseTexture = planetTextures[0];
+		Texture2D layer1Texture = planetTextures[1];
+//		Texture2D layer2Texture = planetTextures[Random.Range(0,planetTextures.Length-1)];
+//		Texture2D detailTexture = planetTextures[Random.Range(0,planetTextures.Length-1)];;
+
+		return AlphaBlend (baseTexture, layer1Texture);
+
 	}
 	
 	// Update is called once per frame
