@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BackgroundBehavior : MonoBehaviour {
 
-	static float THRESHOLD = 1;
+	static float THRESHOLD = 3;
 
 	float initX;
 	float initY;
@@ -56,13 +56,5 @@ public class BackgroundBehavior : MonoBehaviour {
 			rb.AddForce (0, force, 0);
 			//Debug.Log ("else: "+transform.position.y);
 		}
-
-//		if (transform.position.z > initZ + THRESHOLD*1000) {
-//			rb.AddForce (0, 0, -force);
-//			//Debug.Log ("if: "+transform.position.y);
-//		} else {
-//			rb.AddForce (0, 0, force);
-//			//Debug.Log ("else: "+transform.position.y);
-//		}
 	}
 }
