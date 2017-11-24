@@ -15,17 +15,21 @@ public class PlanetMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if (transform.position.x > 0) {
-			xSpeed = -0.01f;
-			ySpeed = -0.01f;
-			zSpeed = 0.0f;
-		} 
-		else {
-			xSpeed = 0.01f;
-			ySpeed = -0.01f;
-			zSpeed = 0.0f; 
 
-		}
+		xSpeed = Random.Range (-1f, 1f);
+		ySpeed = Random.Range (-1f, 1f);
+		zSpeed = 0f;
+//		if (transform.position.x > 0) {
+//			xSpeed = -0.01f;
+//			ySpeed = -0.01f;
+//			zSpeed = 0.0f;
+//		} 
+//		else {
+//			xSpeed = 0.01f;
+//			ySpeed = -0.01f;
+//			zSpeed = 0.0f; 
+//
+//		}
 			
 
 	}
