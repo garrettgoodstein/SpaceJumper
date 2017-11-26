@@ -467,6 +467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889042410}
   - component: {fileID: 889042409}
+  - component: {fileID: 889042411}
   m_Layer: 0
   m_Name: UNIVERSE BACKFROUND2
   m_TagString: Untagged
@@ -529,6 +530,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &889042411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 889042408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde5526f5bd3ca243b0fef0069c66ac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.01
+  constantScale: {x: 62, y: 30, z: 0}
 --- !u!1 &966755212
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,7 +623,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966755212}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bde5526f5bd3ca243b0fef0069c66ac1, type: 3}
   m_Name: 
