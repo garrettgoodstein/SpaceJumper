@@ -606,8 +606,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 286.4, y: 201}
-  m_SizeDelta: {x: 1613, y: 667.5}
+  m_AnchoredPosition: {x: 254.1, y: 183.9}
+  m_SizeDelta: {x: 1677.7, y: 701.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &929976600
 AudioSource:
@@ -825,7 +825,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 29.171015
+  field of view: 39.23479
   orthographic: 0
   orthographic size: 322.8199
   m_Depth: -1
@@ -890,7 +890,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.38200003, y: 0.026370574}
   m_AnchorMax: {x: 0.63373893, y: 0.16131875}
-  m_AnchoredPosition: {x: 6.203, y: -15.618}
+  m_AnchoredPosition: {x: 6.202999, y: -15.618011}
   m_SizeDelta: {x: 12.4060135, y: 3.9677165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1940437066
