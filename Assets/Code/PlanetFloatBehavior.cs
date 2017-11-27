@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class PlanetFloatBehavior : MonoBehaviour {
 
-	static float THRESHOLD = 2;
-
+	static float THRESHOLD = 3;
 	float initX;
 	float initY;
 	float initZ;
 	Rigidbody rb;
+	SpriteRenderer sr;
+	GameObject planet;
+	PlanetGenerator generatorScript;
+
 
 	// Use this for initialization
 	void Start () {
 
-		rb = transform.GetComponent<Rigidbody>();
+		rb = gameObject.GetComponent<Rigidbody> ();
+		sr = gameObject.GetComponent<SpriteRenderer> ();
 		initX = transform.position.x;
 		initY = transform.position.y;
 		initZ = transform.position.z;
@@ -23,8 +27,9 @@ public class PlanetFloatBehavior : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		int randTypeForce = Random.Range (0, 3);
-		int force = Random.Range (7, 12); 
+		int force = Random.Range (10, 15); 
 
 
 		if (randTypeForce == 0) {
@@ -57,12 +62,23 @@ public class PlanetFloatBehavior : MonoBehaviour {
 			//Debug.Log ("else: "+transform.position.y);
 		}
 
-		if (transform.position.z > initZ + THRESHOLD*1000) {
+		if (transform.position.z > initZ + THRESHOLD) {
 			rb.AddForce (0, 0, -force);
 			//Debug.Log ("if: "+transform.position.y);
 		} else {
 			rb.AddForce (0, 0, force);
 			//Debug.Log ("else: "+transform.position.y);
 		}
+
+		//deleteIfNotVisible ();
+	}
+
+
+
+	void deleteIfNotVisible(){
+		if (!sr.isVisible) {
+			Destroy (gameObject, 10);
+		}
+	
 	}
 }

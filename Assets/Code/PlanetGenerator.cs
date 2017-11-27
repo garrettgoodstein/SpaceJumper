@@ -12,7 +12,7 @@ public class PlanetGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		planetTextures = new Texture2D[2];
+		planetTextures = new Texture2D[6];
 		loadTextures ();
 
 		for (int i = 0; i < 15; i++) {
@@ -21,19 +21,7 @@ public class PlanetGenerator : MonoBehaviour {
 
 	}
 
-
-	void Update(){
-		if (!planetRenderer.isVisible) {
-			//TODO need to fix the destroy method so the object disappears
-		}
-
-	}
-
-	//Add a method that creates a new planet so it can be used both in the start and to check if a planet is destroyed
-
 	public void createNewPlanet(){
-		//Texture2D blend  = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
-
 		Texture2D blend = blendTextures ();
 
 		planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-800,800), Random.Range(-800,800), Random.Range(1000, 1900)), transform.rotation) as GameObject;
@@ -47,15 +35,19 @@ public class PlanetGenerator : MonoBehaviour {
 		//LoadAll not getting the images in file and returning as list *need to check documentation*
 		//planetTextures = Resources.LoadAll ("PlanetTextures", typeof(Texture2D[])) as Texture2D[];
 
-		planetTextures [0] = Resources.Load ("PlanetTextures/Test2", typeof(Texture2D)) as Texture2D;
-		planetTextures [1] = Resources.Load ("PlanetTextures/Test1", typeof(Texture2D)) as Texture2D;
+		planetTextures [0] = Resources.Load ("PlanetTextures/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
+		planetTextures [1] = Resources.Load ("PlanetTextures/blueTexture1", typeof(Texture2D)) as Texture2D;
+		planetTextures [2] = Resources.Load ("PlanetTextures/blueTexture2", typeof(Texture2D)) as Texture2D;
+		planetTextures [3] = Resources.Load ("PlanetTextures/purpleTexture1", typeof(Texture2D)) as Texture2D;
+		planetTextures [4] = Resources.Load ("PlanetTextures/purpleTexture2", typeof(Texture2D)) as Texture2D;
+		planetTextures [5] = Resources.Load ("PlanetTextures/yellowTexture", typeof(Texture2D)) as Texture2D;
 	}
 
 	//Blends Textures together using AlphaBlend and returns the resulting Texture2D object
 	Texture2D blendTextures(){
 		
-		Texture2D baseTexture = planetTextures[0];
-		Texture2D layer1Texture = planetTextures[1];
+		Texture2D baseTexture = planetTextures[Random.Range(0,4)];
+		Texture2D layer1Texture = planetTextures[Random.Range(2, 6)];
 //		Texture2D layer2Texture = planetTextures[Random.Range(0,planetTextures.Length-1)];
 //		Texture2D detailTexture = planetTextures[Random.Range(0,planetTextures.Length-1)];;
 
