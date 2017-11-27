@@ -49,10 +49,9 @@ public class PlanetTouchBehavior : MonoBehaviour {
 
 				currentHomePlanet.tag = "Planet"; //Update
 				closestPlanet.tag = "HomePlanet";
-
-
 		}
 	}
+}
 }
 
 
