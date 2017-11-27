@@ -39,9 +39,14 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)) {
 				// If the finger is on the screen, move the object smoothly to the touch position
 
-				var closestPlanetPosition = findClosestPlanet ().transform.position;
+				var closestPlanetPosition = findClosestPlanet().transform.position;
+				var closestPlanet = findClosestPlanet ();
 				var princePosition = GameObject.FindGameObjectWithTag ("Prince").transform.position;
-				var princeObjects = GameObject.FindGameObjectsWithTag("Prince");
+				var princeObject = GameObject.FindGameObjectWithTag("Prince");
+				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
+				currentHomePlanet.tag = "Planet";
+				closestPlanet.tag = "HomePlanet";
+
 
 				foreach (GameObject r in princeObjects)
 					transform.position = Vector3.MoveTowards(closestPlanetPosition, transform.position, Time.deltaTime);
