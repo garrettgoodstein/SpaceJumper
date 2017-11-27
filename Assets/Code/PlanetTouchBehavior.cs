@@ -39,6 +39,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)) {
 				// If the finger is on the screen, move the object smoothly to the touch position
 
+<<<<<<< HEAD
 				var closestPlanetPosition = findClosestPlanet ().transform.position;
 				var princePosition = GameObject.FindGameObjectWithTag ("Prince").transform.position;
 				var princeObjects = GameObject.FindGameObjectsWithTag("Prince");
@@ -46,6 +47,20 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				foreach (GameObject r in princeObjects)
 					transform.position = Vector3.MoveTowards(closestPlanetPosition, transform.position, Time.deltaTime);
 			}
+=======
+				var closestPlanetPosition = findClosestPlanet().transform.position;
+				var closestPlanet = findClosestPlanet ();
+				var princePosition = GameObject.FindGameObjectWithTag ("Prince").transform.position;
+				var princeObject = GameObject.FindGameObjectWithTag("Prince");
+				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
+
+				transform.position = Vector3.MoveTowards(closestPlanetPosition, transform.position, Time.deltaTime); //Move
+
+				currentHomePlanet.tag = "Planet"; //Update
+				closestPlanet.tag = "HomePlanet";
+
+
+>>>>>>> 1905ed9334cdfca8c97a61b8aefa5eacc1a27990
 		}
 	}
 }

@@ -135,6 +135,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &176788269
 GameObject:
@@ -206,6 +207,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+=======
+>>>>>>> 1905ed9334cdfca8c97a61b8aefa5eacc1a27990
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &574808215
 GameObject:
@@ -970,6 +973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1917778206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1126,6 +1130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 =======
 >>>>>>> 56e3b39b6af4eb2bbb1f6b56da8df3c01d464385
+=======
+>>>>>>> 1905ed9334cdfca8c97a61b8aefa5eacc1a27990
 --- !u!1 &2056176822
 GameObject:
   m_ObjectHideFlags: 0
