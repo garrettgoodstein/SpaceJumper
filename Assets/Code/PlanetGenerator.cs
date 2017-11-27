@@ -10,9 +10,12 @@ public class PlanetGenerator : MonoBehaviour {
 	SpriteRenderer planetRenderer;
 	Texture2D[] planetTextures;
 
+	bool visible;
+
 	// Use this for initialization
 	void Start () {
 		planetTextures = new Texture2D[6];
+		visible = true;
 		loadTextures ();
 
 		for (int i = 0; i < 15; i++) {
@@ -24,8 +27,9 @@ public class PlanetGenerator : MonoBehaviour {
 	public void createNewPlanet(){
 		Texture2D blend = blendTextures ();
 
-		planet_clone = (GameObject) Instantiate (planet, new Vector3(Random.Range(-800,800), Random.Range(-800,800), Random.Range(1000, 1900)), transform.rotation) as GameObject;
+		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (200, 500)), transform.rotation) as GameObject;
 		//planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
+
 		planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
 		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
 	
@@ -56,19 +60,22 @@ public class PlanetGenerator : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
+	void LateUpdate(){
+		if (!planetRenderer.isVisible) {
+			relocate ();
+		}
+	}
 
-	// Having issue where two false values are recorded after start has finished running
-	void LateUpdate () {
-//		Debug.Log ("Is visible: "+planetRenderer.isVisible);
-//		if (!planetRenderer.isVisible) {
-//			Destroy (planet_clone);
-//			planet_clone = (GameObject) Instantiate (planet, new Vector3(100, 50, 200), transform.rotation) as GameObject;
-//			Texture2D blend = AlphaBlend(Resources.Load("Images/Test2", typeof (Texture2D)) as Texture2D,Resources.Load("Images/Test1", typeof (Texture2D)) as Texture2D);
-//			planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.5f, 0.5f), 10.0f) as Sprite;
-//			enabled = true;
-//		}
+	void relocate(){
+//		Texture2D blend = blendTextures ();
+//		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+
+		// TODO: need to see if the position of the planet can be modified without using translate or addforce
+		// doesn't work
+		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (200, 500));
 
 	}
+
 
 
 	// make sure this code is credited https://answers.unity.com/questions/1008802/merge-multiple-png-images-one-on-top-of-the-other.html

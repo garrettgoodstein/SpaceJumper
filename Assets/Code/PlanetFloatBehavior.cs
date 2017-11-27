@@ -21,7 +21,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 		sr = gameObject.GetComponent<SpriteRenderer> ();
 		initX = transform.position.x;
 		initY = transform.position.y;
-		initZ = transform.position.z;
+//		initZ = transform.position.z;
 
 	}
 	
@@ -33,13 +33,13 @@ public class PlanetFloatBehavior : MonoBehaviour {
 
 
 		if (randTypeForce == 0) {
-			rb.AddForce (0, force, force);
+			rb.AddForce (0, force, 0);
 		}
 		if (randTypeForce == 1) {
 			rb.AddForce (force, 0, 0);
 		}
 		if (randTypeForce == 2) {
-			rb.AddForce (0, -force, -force);
+			rb.AddForce (0, -force, 0);
 		}
 		if (randTypeForce == 3) {
 			rb.AddForce (-force, 0, 0);
@@ -62,23 +62,23 @@ public class PlanetFloatBehavior : MonoBehaviour {
 			//Debug.Log ("else: "+transform.position.y);
 		}
 
-		if (transform.position.z > initZ + THRESHOLD) {
-			rb.AddForce (0, 0, -force);
-			//Debug.Log ("if: "+transform.position.y);
-		} else {
-			rb.AddForce (0, 0, force);
-			//Debug.Log ("else: "+transform.position.y);
-		}
+//		if (transform.position.z > initZ + THRESHOLD) {
+//			rb.AddForce (0, 0, -force);
+//			//Debug.Log ("if: "+transform.position.y);
+//		} else {
+//			rb.AddForce (0, 0, force);
+//			//Debug.Log ("else: "+transform.position.y);
+//		}
 
 		//deleteIfNotVisible ();
 	}
 
 
 
-	void deleteIfNotVisible(){
-		if (!sr.isVisible) {
-			Destroy (gameObject, 10);
-		}
-	
-	}
+//	void deleteIfNotVisible(){
+//		if (!sr.isVisible) {
+//			Destroy (gameObject, 10);
+//		}
+//	
+//	}
 }
