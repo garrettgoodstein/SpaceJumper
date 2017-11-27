@@ -44,13 +44,13 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				var princePosition = GameObject.FindGameObjectWithTag ("Prince").transform.position;
 				var princeObject = GameObject.FindGameObjectWithTag("Prince");
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
-				currentHomePlanet.tag = "Planet";
+
+				transform.position = Vector3.MoveTowards(closestPlanetPosition, transform.position, Time.deltaTime); //Move
+
+				currentHomePlanet.tag = "Planet"; //Update
 				closestPlanet.tag = "HomePlanet";
 
 
-				foreach (GameObject r in princeObjects)
-					transform.position = Vector3.MoveTowards(closestPlanetPosition, transform.position, Time.deltaTime);
-			}
 		}
 	}
 }
