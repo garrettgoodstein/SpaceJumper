@@ -39,20 +39,19 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)) {
 				// If the finger is on the screen, move the object smoothly to the touch position
 
+				var step = Time.deltaTime * speed;
+
 				var closestPlanetPosition = findClosestPlanet(touch).transform.position;
 				var closestPlanet = findClosestPlanet(touch);
-				var princePosition = GameObject.FindGameObjectWithTag ("Prince").transform.position;
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
 
-				transform.position = Vector3.MoveTowards (closestPlanetPosition, transform.position, Time.deltaTime); //Move
+				transform.position = Vector2.MoveTowards (closestPlanetPosition, transform.position, Time.deltaTime * speed); //Move
+//				IGNORE THIS. playing with LERP... transform.position = Vector3.Lerp (closestPlanetPosition, transform.position, step);
 
 				currentHomePlanet.tag = "Planet"; //Update
 				closestPlanet.tag = "HomePlanet";
-
 				}
 		}
 	}
-
-
 }
 
