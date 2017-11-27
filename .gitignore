@@ -33,4 +33,3 @@ sysinfo.txt
 *.apk
 *.unitypackage
 .DS_Store
-Assets/Code/PlanetTouchBehavior.cs
