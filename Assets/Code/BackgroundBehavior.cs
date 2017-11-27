@@ -29,19 +29,15 @@ public class BackgroundBehavior : MonoBehaviour {
 
 		if (randTypeForce == 0) {
 			rb.AddForce (0, force, 0);
-			print ("1 Is this shit even working?");
 		}
 		if (randTypeForce == 1) {
 			rb.AddForce (force, 0, 0);
-			print ("2 Is this shit even working?");
 		}
 		if (randTypeForce == 2) {
 			rb.AddForce (0, -force, 0);
-			print ("3 Is this shit even working?");
 		}
 		if (randTypeForce == 3) {
 			rb.AddForce (-force, 0, 0);
-			print ("4 Is this shit even working?");
 		}
 
 
