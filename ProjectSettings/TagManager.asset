@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Planet
   - Prince
+  - TestPlanet
+  - HomePlanet
   layers:
   - Default
   - TransparentFX
