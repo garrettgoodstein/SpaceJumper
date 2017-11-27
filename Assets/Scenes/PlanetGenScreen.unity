@@ -256,10 +256,9 @@ GameObject:
   m_Component:
   - component: {fileID: 382671561}
   - component: {fileID: 382671560}
-  - component: {fileID: 382671562}
   m_Layer: 0
   m_Name: LittlePrince
-  m_TagString: Prince
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,18 +319,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &382671562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 382671559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde5526f5bd3ca243b0fef0069c66ac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
 --- !u!1 &397109558
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +348,7 @@ Transform:
   m_LocalScale: {x: 2007.9624, y: 810.8483, z: 1}
   m_Children: []
   m_Father: {fileID: 1762374737}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!54 &397109560
 Rigidbody:
@@ -460,7 +447,7 @@ Transform:
   m_LocalScale: {x: 5090.8594, y: 868.30853, z: 1}
   m_Children: []
   m_Father: {fileID: 1762374737}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &562918600
 Rigidbody:
@@ -958,9 +945,9 @@ Transform:
   - {fileID: 1188405622}
   - {fileID: 1076110812}
   - {fileID: 935745344}
+  - {fileID: 1857909523}
   - {fileID: 562918599}
   - {fileID: 397109559}
-  - {fileID: 1857909523}
   m_Father: {fileID: 382671561}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1061,5 +1048,5 @@ Transform:
   m_LocalScale: {x: 1992.0964, y: 573.92816, z: 1}
   m_Children: []
   m_Father: {fileID: 1762374737}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

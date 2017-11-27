@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlanetTouchBehavior : MonoBehaviour {
 	public float speed = 0.0F;
+	public Vector3 constantScale = new Vector3 (62, 30);
 
+<<<<<<< HEAD
 	private GameObject findClosestPlanet(Touch touch) 
 	// Finds the closests planet in relation to the prince's position. 
 	// The code for this method is borrowed from Unity's documentation.
@@ -30,15 +32,23 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		return closestPlanet;
 	}
 
+=======
+	// Use this for initialization
+>>>>>>> bda84e5219d82282e82a80248b7754e9415e4811
 	void Start () {}
-
+	
+	// Update is called once per frame
 	void Update () {
 		if (Input.touchCount > 0) {
 			// The screen has been touched so store the touch
 			Touch touch = Input.GetTouch (0);
+
 			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)) {
 				// If the finger is on the screen, move the object smoothly to the touch position
+				Vector3 touchPosition = Camera.main.ScreenToWorldPoint (new Vector3 (touch.position.x, touch.position.y, 0));
+				transform.position = Vector3.Lerp (transform.position, touchPosition, Time.deltaTime);
 
+<<<<<<< HEAD
 				var closestPlanetPosition = findClosestPlanet(touch).transform.position;
 				var closestPlanet = findClosestPlanet(touch);
 				var princePosition = GameObject.FindGameObjectWithTag ("Prince").transform.position;
@@ -50,9 +60,16 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				closestPlanet.tag = "HomePlanet";
 
 				}
+=======
+			
+			}
+>>>>>>> bda84e5219d82282e82a80248b7754e9415e4811
 		}
 	}
 
+<<<<<<< HEAD
 
 }
 
+=======
+>>>>>>> bda84e5219d82282e82a80248b7754e9415e4811
