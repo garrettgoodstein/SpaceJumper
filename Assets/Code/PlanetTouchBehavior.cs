@@ -45,6 +45,8 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				var closestPlanet = findClosestPlanet(touch);
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
 
+				print (closestPlanetPosition);
+
 				transform.position = Vector2.MoveTowards (closestPlanetPosition, transform.position, Time.deltaTime * speed); //Move
 
 				currentHomePlanet.tag = "Planet"; //Update

@@ -24,7 +24,7 @@ public class BackgroundBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int randTypeForce = Random.Range (0, 3);
-		int force = Random.Range (70,100); 
+		int force = Random.Range (30,50); 
 
 
 		if (randTypeForce == 0) {
