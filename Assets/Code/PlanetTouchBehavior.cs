@@ -46,7 +46,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
 
 				transform.position = Vector2.MoveTowards (closestPlanetPosition, transform.position, Time.deltaTime * speed); //Move
-//				IGNORE THIS. playing with LERP... transform.position = Vector3.Lerp (closestPlanetPosition, transform.position, step);
 
 				currentHomePlanet.tag = "Planet"; //Update
 				closestPlanet.tag = "HomePlanet";
