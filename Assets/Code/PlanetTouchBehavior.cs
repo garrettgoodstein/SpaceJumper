@@ -26,14 +26,13 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				distance = curDistance;
 			}
 		}
-//		closestPlanet.tag = "HomePlanet";
 		return closestPlanet;
 	}
 
 	void Start () {}
 
 	void Update () {
-		if (Input.touchCount > 0) {
+		if (Input.touchCount == 1) {
 			// The screen has been touched so store the touch
 			Touch touch = Input.GetTouch (0);
 			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)) {
@@ -45,9 +44,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				var closestPlanet = findClosestPlanet(touch);
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
 
-				print (closestPlanetPosition);
-
-				transform.position = Vector2.MoveTowards (closestPlanetPosition, transform.position, Time.deltaTime * speed); //Move
+				transform.position = Vector2.MoveTowards (closestPlanetPosition, transform.position, step); // Move
 
 				currentHomePlanet.tag = "Planet"; //Update
 				closestPlanet.tag = "HomePlanet";
