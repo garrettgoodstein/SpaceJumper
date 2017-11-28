@@ -19,6 +19,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 
 		rb = gameObject.GetComponent<Rigidbody> ();
 		sr = gameObject.GetComponent<SpriteRenderer> ();
+
 		initX = transform.position.x;
 		initY = transform.position.y;
 //		initZ = transform.position.z;
@@ -29,7 +30,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 	void Update () {
 
 		int randTypeForce = Random.Range (0, 3);
-		int force = Random.Range (10, 15); 
+		int force = Random.Range (10, 12); 
 
 
 		if (randTypeForce == 0) {
@@ -62,15 +63,37 @@ public class PlanetFloatBehavior : MonoBehaviour {
 			//Debug.Log ("else: "+transform.position.y);
 		}
 
-//		if (transform.position.z > initZ + THRESHOLD) {
-//			rb.AddForce (0, 0, -force);
-//			//Debug.Log ("if: "+transform.position.y);
-//		} else {
+		if (transform.position.z > initZ + THRESHOLD - 2000) {
+			rb.AddForce (0, 0, -force);
+			//Debug.Log ("if: "+transform.position.y);
+		} 
+//		else {
 //			rb.AddForce (0, 0, force);
 //			//Debug.Log ("else: "+transform.position.y);
-//		}
+//	}
 
 		//deleteIfNotVisible ();
+	}
+
+	void LateUpdate(){
+		if (sr.isVisible) {
+//			relocate ();
+//			Debug.Log ("relocated");
+		} else {
+			relocate ();
+			Debug.Log ("relocated");
+		}
+	}
+
+	void relocate(){
+		//		Texture2D blend = blendTextures ();
+		//		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+
+		// TODO: need to see if the position of the planet can be modified without using translate or addforce
+		// doesn't work
+		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (1000, 1200));
+
+
 	}
 
 

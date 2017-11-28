@@ -27,7 +27,7 @@ public class PlanetGenerator : MonoBehaviour {
 	public void createNewPlanet(){
 		Texture2D blend = blendTextures ();
 
-		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (200, 500)), transform.rotation) as GameObject;
+		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (800, 1900)), transform.rotation) as GameObject;
 		//planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
 
 		planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
@@ -59,22 +59,22 @@ public class PlanetGenerator : MonoBehaviour {
 
 	}
 	
-	// Update is called once per frame
-	void LateUpdate(){
-		if (!planetRenderer.isVisible) {
-			relocate ();
-		}
-	}
-
-	void relocate(){
-//		Texture2D blend = blendTextures ();
-//		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
-
-		// TODO: need to see if the position of the planet can be modified without using translate or addforce
-		// doesn't work
-		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (200, 500));
-
-	}
+//	// Update is called once per frame
+//	void LateUpdate(){
+//		if (!planetRenderer.isVisible) {
+//			relocate ();
+//		}
+//	}
+//
+//	void relocate(){
+////		Texture2D blend = blendTextures ();
+////		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+//
+//		// TODO: need to see if the position of the planet can be modified without using translate or addforce
+//		// doesn't work
+//		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (200, 500));
+//
+//	}
 
 
 
