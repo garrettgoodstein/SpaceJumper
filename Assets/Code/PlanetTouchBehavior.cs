@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetTouchBehavior : MonoBehaviour {
-	public float speed = 0.0F;
+	public float speed = 10000.0F;
 
 	private GameObject findClosestPlanet(Touch touch) 
 	// Finds the closests planet in relation to the prince's position. 
@@ -44,7 +44,14 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				var closestPlanet = findClosestPlanet(touch);
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
 
-				transform.position = Vector2.MoveTowards (closestPlanetPosition, transform.position, step); // Move
+//				for (int i = 1; i <= 100; i++) {
+//					
+//				}
+
+				print ("no change" + closestPlanetPosition);
+				print ("This is the test" + closestPlanetPosition / 100); 
+
+				transform.position = Vector2.MoveTowards (transform.position, closestPlanetPosition, step); // Move
 
 				currentHomePlanet.tag = "Planet"; //Update
 				closestPlanet.tag = "HomePlanet";
