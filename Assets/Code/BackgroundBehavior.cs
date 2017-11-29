@@ -43,18 +43,14 @@ public class BackgroundBehavior : MonoBehaviour {
 
 		if (transform.position.x > initX + THRESHOLD) {
 			rb.AddForce (-force, 0, 0);
-//			Debug.Log ("if: "+transform.position.x);
 		} else {
 			rb.AddForce (force, 0, 0);
-//			Debug.Log ("else: "+transform.position.x);
 		}
 
 		if (transform.position.y > initY + THRESHOLD) {
 			rb.AddForce (0, -force, 0);
-//			Debug.Log ("if: "+transform.position.y);
 		} else {
 			rb.AddForce (0, force, 0);
-//			Debug.Log ("else: "+transform.position.y);
 		}
 	}
 }
