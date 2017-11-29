@@ -81,7 +81,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 //			Debug.Log ("relocated");
 		} else {
 			relocate ();
-			Debug.Log ("relocated");
+//			Debug.Log ("relocated");
 		}
 	}
 
