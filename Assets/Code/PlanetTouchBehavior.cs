@@ -43,6 +43,8 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				var closestPlanet = findClosestPlanet(touch);
 				var currentHomePlanet = GameObject.FindGameObjectWithTag ("HomePlanet");
 
+				print (touch.position);
+
 				transform.position = Vector3.MoveTowards (transform.position, closestPlanetPosition, step); // Move
 
 				// TODO: The change in tags below should not happen until the prince has safely reached the planet that the user clicked on.
