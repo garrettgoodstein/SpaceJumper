@@ -20,6 +20,7 @@ public class PlanetGenerator : MonoBehaviour {
 
 		for (int i = 0; i < 15; i++) {
 			createNewPlanet ();
+
 		}
 
 	}
@@ -32,7 +33,6 @@ public class PlanetGenerator : MonoBehaviour {
 
 		planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
 		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
-	
 	}
 
 	void loadTextures(){

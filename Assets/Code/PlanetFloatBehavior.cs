@@ -8,10 +8,14 @@ public class PlanetFloatBehavior : MonoBehaviour {
 	float initX;
 	float initY;
 	float initZ;
+	float princeOffset;
 	Rigidbody rb;
 	SpriteRenderer sr;
 	GameObject planet;
 	PlanetGenerator generatorScript;
+
+	GameObject prince;
+	Transform princeTransform;
 
 
 	// Use this for initialization
@@ -19,6 +23,9 @@ public class PlanetFloatBehavior : MonoBehaviour {
 
 		rb = gameObject.GetComponent<Rigidbody> ();
 		sr = gameObject.GetComponent<SpriteRenderer> ();
+
+		prince = GameObject.FindGameObjectWithTag ("Prince");
+		princeTransform = prince.GetComponent<Transform> ();
 
 		initX = transform.position.x;
 		initY = transform.position.y;
@@ -29,7 +36,9 @@ public class PlanetFloatBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		int randTypeForce = Random.Range (0, 3);
+		princeOffset = princeTransform.position.z;
+
+		int randTypeForce = Random.Range (0, 4);
 		int force = Random.Range (10, 12); 
 
 
@@ -63,14 +72,14 @@ public class PlanetFloatBehavior : MonoBehaviour {
 			//Debug.Log ("else: "+transform.position.y);
 		}
 
-		if (transform.position.z > initZ + THRESHOLD - 2000) {
-			rb.AddForce (0, 0, -force);
-			//Debug.Log ("if: "+transform.position.y);
-		} 
+//		if (transform.position.z > initZ + THRESHOLD) {
+//			rb.AddForce (0, 0, -force);
+//			//Debug.Log ("if: "+transform.position.y);
+//		} 
 //		else {
 //			rb.AddForce (0, 0, force);
 //			//Debug.Log ("else: "+transform.position.y);
-//	}
+	
 
 		//deleteIfNotVisible ();
 	}
@@ -81,7 +90,9 @@ public class PlanetFloatBehavior : MonoBehaviour {
 //			Debug.Log ("relocated");
 		} else {
 			relocate ();
-//			Debug.Log ("relocated");
+			initX = transform.position.x;
+			initY = transform.position.y;
+//			
 		}
 	}
 
@@ -91,7 +102,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 
 		// TODO: need to see if the position of the planet can be modified without using translate or addforce
 		// doesn't work
-		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (1000, 1200));
+		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (1000+princeOffset, 1200+princeOffset));
 
 
 	}
