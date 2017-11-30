@@ -22,7 +22,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 
 				randomPlanet = GameObject.FindGameObjectWithTag ("Planet");
 
-				// OLD CODE BELOW. 
+				// OLD CODE BELOW. REFERENCE PURPOSES ONLY ----------------------------------------------------------------------------------
 
 //				var closestPlanetPosition = findClosestPlanet(touch).transform.position;
 
@@ -40,7 +40,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		}
 	}
 
-	// OLD METHOD BELOW. IGNORE
+	// OLD METHOD BELOW. IGNORE FOR NOW. REFERENCE PURPOSES ONLY ---------------------------------------------------------------------------
 	//	private GameObject findClosestPlanet(Touch touch) 
 	//	// Finds the closests planet in relation to the prince's position. 
 	//	// The code for this method is borrowed from Unity's documentation.
