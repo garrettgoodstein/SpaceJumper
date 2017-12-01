@@ -14,7 +14,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			if ((touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)) {
 				// If the finger is on the screen, move the object smoothly to the touch position
 				var step = Time.deltaTime * speed;
-
 				var randomPlanet = GameObject.FindGameObjectWithTag ("Planet"); // Matt's random planets are tagged as "Planet".
 				var planetPosition = randomPlanet.transform.position;
 
