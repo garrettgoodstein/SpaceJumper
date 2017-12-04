@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeftRight: MonoBehaviour {
+public class ScrollLeftRight: MonoBehaviour {
 
 public float backgroundSize;
 
