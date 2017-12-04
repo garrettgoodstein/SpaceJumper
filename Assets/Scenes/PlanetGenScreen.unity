@@ -758,13 +758,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 382671559}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6427876, w: 0.7660445}
+  m_LocalPosition: {x: 10.567059, y: 2.3811255, z: 0}
+  m_LocalScale: {x: 0.50000006, y: 0.50000006, z: 1}
   m_Children:
   - {fileID: 1762374737}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+
+  m_Father: {fileID: 422261702}
+  m_RootOrder: 0
+
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &382671562
 MonoBehaviour:
@@ -777,7 +779,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde5526f5bd3ca243b0fef0069c66ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
 --- !u!1 &389741596
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,6 +859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 422261702}
   - component: {fileID: 422261701}
+  - component: {fileID: 422261703}
   m_Layer: 0
   m_Name: StartingPlanet
   m_TagString: HomePlanet
@@ -916,10 +918,22 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0.6427876, w: 0.7660445}
   m_LocalPosition: {x: 0.51, y: -10.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 382671561}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 80}
+--- !u!114 &422261703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422261700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17de610b164484ae7b780eb85fb107f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &423080753
 GameObject:
   m_ObjectHideFlags: 0
@@ -1795,7 +1809,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1042713059
 GameObject:

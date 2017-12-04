@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -102,9 +102,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 
 		// TODO: need to see if the position of the planet can be modified without using translate or addforce
 		// doesn't work
-		transform.position = new Vector3 (Random.Range (-2000, 2000), Random.Range (-2000, 2000), Random.Range (1000+princeOffset, 1200+princeOffset));
-
-
+		transform.position = new Vector3 (Random.Range (princeTransform.position.x-1550, princeTransform.position.x+1550), Random.Range (princeTransform.position.y - 630, princeTransform.position.y + 630), Random.Range (300+princeOffset, 700+princeOffset));
 	}
 
 
