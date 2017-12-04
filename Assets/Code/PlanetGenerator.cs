@@ -22,17 +22,16 @@ public class PlanetGenerator : MonoBehaviour {
 			createNewPlanet ();
 
 		}
-
 	}
-
 	public void createNewPlanet(){
 		Texture2D blend = blendTextures ();
 
 		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (800, 1900)), transform.rotation) as GameObject;
-		//planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
+		planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
 
 		planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
 		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+		planet_clone.tag = "Planet";
 	}
 
 	void loadTextures(){

@@ -102,7 +102,7 @@ public class PlanetFloatBehavior : MonoBehaviour {
 
 		// TODO: need to see if the position of the planet can be modified without using translate or addforce
 		// doesn't work
-		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (1000+princeOffset, 1200+princeOffset));
+		transform.position = new Vector3 (Random.Range (princeTransform.position.x-1550, princeTransform.position.x+1550), Random.Range (princeTransform.position.y - 630, princeTransform.position.y + 630), Random.Range (300+princeOffset, 700+princeOffset));
 
 
 	}
