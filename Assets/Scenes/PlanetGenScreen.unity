@@ -1237,6 +1237,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 15, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 550911147}
+
   - {fileID: 671092634}
   m_Father: {fileID: 382671561}
   m_RootOrder: 0
