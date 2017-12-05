@@ -51,6 +51,8 @@ public class ScrollBackground : MonoBehaviour {
 		
 	}
 
+	
+
 	private void Update()
 	{
 		if (cameraTransform.position.y < (layers[downIndex].transform.position.y + viewzone))
