@@ -1,10 +1,10 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BackgroundBehavior : MonoBehaviour {
+public class floats3 : MonoBehaviour {
 
-	static float THRESHOLD = 80;
+	static float THRESHOLD = 30;
 
 	float initX;
 	float initY;
@@ -24,7 +24,7 @@ public class BackgroundBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int randTypeForce = Random.Range (0, 3);
-		int force = Random.Range (30,50); 
+		int force = Random.Range (2,5); 
 
 
 		if (randTypeForce == 0) {
