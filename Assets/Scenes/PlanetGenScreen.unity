@@ -1020,8 +1020,8 @@ GameObject:
   - component: {fileID: 224348465}
   - component: {fileID: 224348464}
   m_Layer: 5
-  m_Name: ToMainMenuButton
-  m_TagString: Untagged
+  m_Name: RestartButton
+  m_TagString: RestartButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1043,7 +1043,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 20, y: -10}
-  m_SizeDelta: {x: 188.36, y: 32.323}
+  m_SizeDelta: {x: 350, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224348464
 MonoBehaviour:
@@ -1066,7 +1066,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.5303515, g: 0.7941176, b: 0.029195482, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.86764705, g: 0.62741613, b: 0.19777247, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1085,14 +1085,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1002051845}
-        m_MethodName: LoadScenes
-        m_Mode: 5
+        m_MethodName: Restart
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: MainMenuScene
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -2454,7 +2454,7 @@ GameObject:
   - component: {fileID: 550911149}
   - component: {fileID: 550911148}
   m_Layer: 5
-  m_Name: MainMenuCanvas
+  m_Name: RestartCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2476,7 +2476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -6.9, y: -1.4}
   m_SizeDelta: {x: 609, y: 343}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550911148
@@ -3364,6 +3364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8c50fa2bf21754a926db191ef848e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RestartButton: {fileID: 0}
 --- !u!4 &1002051846
 Transform:
   m_ObjectHideFlags: 0
@@ -4499,7 +4500,7 @@ GameObject:
   - component: {fileID: 1858757391}
   - component: {fileID: 1858757390}
   m_Layer: 5
-  m_Name: ToMainMenuButtonText
+  m_Name: RestartButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4535,7 +4536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.922, g: 0.972, b: 0.028330477, a: 1}
+  m_Color: {r: 0.09164072, g: 0.09558821, b: 0.021085631, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4544,18 +4545,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Main Menu
+  m_Text: Restart
 --- !u!222 &1858757391
 CanvasRenderer:
   m_ObjectHideFlags: 0
