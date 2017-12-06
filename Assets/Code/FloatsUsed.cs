@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class floats3 : MonoBehaviour {
+public class FloatsUsed : MonoBehaviour {
 
 	static float THRESHOLD = 30;
 

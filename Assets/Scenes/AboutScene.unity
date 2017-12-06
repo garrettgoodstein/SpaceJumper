@@ -321,12 +321,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Space Wanderer is a meditative game developed by four Macalester College
-    students in 2017 for their Software Design and Development course. Play this game
-    and discover wonderful planets in space with the little prince. To play, simply
-    press down on the planet that you would like the prince to jump to. Keep on jumping
-    to new planets to discover the infinite space. We hope you enjoy the meditative
-    experience. \n"
+  m_Text: 'To play, simply press down on the planet that you would like the prince
+    to jump to. Keep on jumping to new planets to discover the infinite space. '
 --- !u!222 &440123853
 CanvasRenderer:
   m_ObjectHideFlags: 0

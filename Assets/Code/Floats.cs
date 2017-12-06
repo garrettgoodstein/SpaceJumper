@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Floats3 : MonoBehaviour {
+public class floats : MonoBehaviour {
 
 	static float THRESHOLD = 30;
 
