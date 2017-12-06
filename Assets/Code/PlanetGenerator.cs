@@ -44,6 +44,14 @@ public class PlanetGenerator : MonoBehaviour {
 		planetTextures [3] = Resources.Load ("PlanetTextures/purpleTexture1", typeof(Texture2D)) as Texture2D;
 		planetTextures [4] = Resources.Load ("PlanetTextures/purpleTexture2", typeof(Texture2D)) as Texture2D;
 		planetTextures [5] = Resources.Load ("PlanetTextures/yellowTexture", typeof(Texture2D)) as Texture2D;
+
+		// loading images
+		// planetTextures [6] = Resources.Load ("PlanetTextures/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
+		// planetTextures [7] = Resources.Load ("PlanetTextures/blueTexture1", typeof(Texture2D)) as Texture2D;
+		// planetTextures [8] = Resources.Load ("PlanetTextures/blueTexture2", typeof(Texture2D)) as Texture2D;
+		// planetTextures [9] = Resources.Load ("PlanetTextures/purpleTexture1", typeof(Texture2D)) as Texture2D;
+		// planetTextures [10] = Resources.Load ("PlanetTextures/purpleTexture2", typeof(Texture2D)) as Texture2D;
+		// planetTextures [11] = Resources.Load ("PlanetTextures/yellowTexture", typeof(Texture2D)) as Texture2D;
 	}
 
 	//Blends Textures together using AlphaBlend and returns the resulting Texture2D object
