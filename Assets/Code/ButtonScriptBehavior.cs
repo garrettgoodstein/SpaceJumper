@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // SpaceWanderer 
 // November 5th, 2017
@@ -10,7 +11,13 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScriptBehavior : MonoBehaviour {
 
-	public void LoadScenes(string sceneName) {
-		SceneManager.LoadScene (sceneName);
+	public Button RestartButton;
+
+	public void Restart()
+	{
+		GameObject.FindWithTag ("RestartButton").GetComponentInChildren<Text> ().text = "Loading...";
+		SceneManager.LoadScene ("PlanetGenScreen");
 	}
 }
+
+

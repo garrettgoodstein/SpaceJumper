@@ -8,6 +8,7 @@ TagManager:
   - Prince
   - TestPlanet
   - HomePlanet
+  - RestartButton
   layers:
   - Default
   - TransparentFX
