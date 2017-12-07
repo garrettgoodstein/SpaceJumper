@@ -13,10 +13,10 @@ public class ButtonScriptBehavior : MonoBehaviour {
 
 	public Button RestartButton;
 
-	public void Restart()
+	public void Restart(string sceneName)
 	{
 		GameObject.FindWithTag ("RestartButton").GetComponentInChildren<Text> ().text = "Loading...";
-		SceneManager.LoadScene ("PlanetGenScreen");
+		SceneManager.LoadScene (sceneName);
 	}
 }
 

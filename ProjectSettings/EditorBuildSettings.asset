@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/AboutScene.unity
     guid: 2c88da3cc7979fd44b27e05541f92441
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PlanetGenScreen.unity
     guid: a8729d56154daf94ea0659758038a4f3
+  - enabled: 1
+    path: Assets/Scenes/MainGameScene.unity
+    guid: d25ef6cca177b94459e647d32118e8f7
