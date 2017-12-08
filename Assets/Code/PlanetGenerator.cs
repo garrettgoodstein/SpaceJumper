@@ -24,7 +24,7 @@ public class PlanetGenerator : MonoBehaviour {
 		}
 	}
 	public void createNewPlanet(){
-//		Texture2D blend = blendTextures ();
+		Texture2D blend = blendTextures ();
 
 		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (800, 1900)), transform.rotation) as GameObject;
 		planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
