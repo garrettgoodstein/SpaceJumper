@@ -32,7 +32,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 
 
 				target = closestPlanet;
-				closestPlanet.tag = "HomePlanet";
+//				closestPlanet.tag = "HomePlanet";
 			}
 		}
 		if (target != null){
