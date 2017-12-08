@@ -24,7 +24,7 @@ public class PlanetGenerator : MonoBehaviour {
 		}
 	}
 	public void createNewPlanet(){
-		Texture2D blend = blendTextures ();
+//		Texture2D blend = blendTextures ();
 
 		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (800, 1900)), transform.rotation) as GameObject;
 		planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
@@ -38,12 +38,12 @@ public class PlanetGenerator : MonoBehaviour {
 		//LoadAll not getting the images in file and returning as list *need to check documentation*
 		//planetTextures = Resources.LoadAll ("PlanetTextures", typeof(Texture2D[])) as Texture2D[];
 
-		planetTextures [0] = Resources.Load ("PlanetTextures/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
-		planetTextures [1] = Resources.Load ("PlanetTextures/blueTexture1", typeof(Texture2D)) as Texture2D;
-		planetTextures [2] = Resources.Load ("PlanetTextures/blueTexture2", typeof(Texture2D)) as Texture2D;
-		planetTextures [3] = Resources.Load ("PlanetTextures/purpleTexture1", typeof(Texture2D)) as Texture2D;
-		planetTextures [4] = Resources.Load ("PlanetTextures/purpleTexture2", typeof(Texture2D)) as Texture2D;
-		planetTextures [5] = Resources.Load ("PlanetTextures/yellowTexture", typeof(Texture2D)) as Texture2D;
+		planetTextures [0] = Resources.Load ("PlanetTextures/Solids/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
+		planetTextures [1] = Resources.Load ("PlanetTextures/Textures/blueTexture1", typeof(Texture2D)) as Texture2D;
+		planetTextures [2] = Resources.Load ("PlanetTextures/Textures/blueTexture2", typeof(Texture2D)) as Texture2D;
+		planetTextures [3] = Resources.Load ("PlanetTextures/Textures/purpleTexture1", typeof(Texture2D)) as Texture2D;
+		planetTextures [4] = Resources.Load ("PlanetTextures/Textures/purpleTexture2", typeof(Texture2D)) as Texture2D;
+		planetTextures [5] = Resources.Load ("PlanetTextures/Textures/yellowTexture", typeof(Texture2D)) as Texture2D;
 
 		// loading images
 		// planetTextures [6] = Resources.Load ("PlanetTextures/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
