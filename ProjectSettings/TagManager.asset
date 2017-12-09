@@ -9,6 +9,7 @@ TagManager:
   - TestPlanet
   - HomePlanet
   - RestartButton
+  - GameObjectTag
   layers:
   - Default
   - TransparentFX
