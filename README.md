@@ -11,7 +11,7 @@ Unity which can be downloaded at (https://unity3d.com/get-unity/download). Unity
 
 3) When the main menu screen appears, click on the tab titled "OPEN", in between the "NEW" and "SIGN IN" Tabs. 
 
-4) Choose the downloaded project as your folder and press "SELECT FOLDER"
+4) Choose the downloaded project as your folder and press "SELECT FOLDER".
 
 5) You should now be in Unity.
 
@@ -21,21 +21,21 @@ Unity which can be downloaded at (https://unity3d.com/get-unity/download). Unity
 
 ### To build and run on mobile devices
 
-First, make sure your Unity setting are up to date. Go to Edit - Project Settings - Player to configure the settings
+First, make sure your Unity setting are up to date. Go to "Edit - Project Settings - Player" to configure the settings.
 
 #### iOS
 
-1) Go to File - Build Settings, and ensure that all of the scenes you would like to be included are included 
-2) Hook up your iPhone to the computer
-3) Press Build and Run
-4) Your phone should display the game automatically and make an app in your device
+1) Go to "File - Build Settings", and ensure that all of the scenes you would like to be included are included. 
+2) Hook up your iPhone to the computer.
+3) Press "Build and Run".
+4) Your phone should display the game automatically and make an app in your device.
 
 #### Android 
 
-1) Go to File - Build Settings, and ensure that all of the scenes you would like to be included are included 
-2) Hook up your Android to the computer
-3) Press Build and Run
-4) Your phone should display the game automatically and make an app in your device
+1) Go to "File - Build Settings", and ensure that all of the scenes you would like to be included are included. 
+2) Hook up your Android to the computer.
+3) Press "Build and Run".
+4) Your phone should display the game automatically and make an app in your device.
 
 ## Conclusion
 
