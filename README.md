@@ -19,8 +19,28 @@ Unity which can be downloaded at (https://unity3d.com/get-unity/download). Unity
 
 7) Happy coding!
 
-## To build and run on mobile devices
+### To build and run on mobile devices
 
+First, make sure your Unity setting are up to date. Go to Edit - Project Settings - Player to configure the settings
 
+#### iOS
+
+1) Go to File - Build Settings, and ensure that all of the scenes you would like to be included are included 
+2) Hook up your iPhone to the computer
+3) Press Build and Run
+4) Your phone should display the game automatically and make an app in your device
+
+#### Android 
+
+1) Go to File - Build Settings, and ensure that all of the scenes you would like to be included are included 
+2) Hook up your Android to the computer
+3) Press Build and Run
+4) Your phone should display the game automatically and make an app in your device
+
+## Conclusion
+
+Happy exploring! The developers hope you have a good time. Please contact us at dhan@macalester.edu with any questions!
+
+The Development Team 
 
 
