@@ -1,5 +1,5 @@
 # Space Wanderer
-Space Wanderer is a meditative game where you get to play as as a prince by hopping to one beautiful planet after another. You will get to explore the wonders of space and jump to planets that will constantly appear. There are no objectives, scores, or missions. The game is about putting yourself in an immersive atmosphere and letting the game take you on an meditative trip.  
+Space Wanderer is a meditative game where you get to play as as a prince by hopping to one beautiful planet after another. You will get to explore the wonders of space and jump to planets that will constantly appear. There are no objectives, scores, or missions. The game is about putting yourself in an immersive atmosphere and letting the game take you on a meditative trip.  
 
 ## Prerequisities
 Unity which can be downloaded at (https://unity3d.com/get-unity/download). Unity has its own sets of tutorials and demos for reference. 
@@ -36,6 +36,20 @@ First, make sure your Unity setting are up to date. Go to "Edit - Project Settin
 2) Hook up your Android to the computer.
 3) Press "Build and Run".
 4) Your phone should display the game automatically and make an app in your device.
+
+## Questions and Answers
+
+Q) Can this be played on a computer?
+
+A) Yes and no. You can run the game on a computer, but unless your computer has touch built in, then you won't be able to jump. Ideally, we would publish a desktop verision of the game. Feel free to make one for yourself!
+
+Q) What's the point of the game? 
+
+A) You control the prince and you tap on a planet you would like to go. You keep tapping away while nejoying the background music and the handdrawn artwork. You don't have to do multiple taps, swipes, or any fancy finger movement. A simple tap will do. 
+
+Q) How is this a game if it has no objectives, missions, or scores?
+
+A)  We believe the game itself is playable because its simple premise will entice users to come back, do some jumps, and go back to their lives. 
 
 ## Conclusion
 
