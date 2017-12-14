@@ -3,111 +3,134 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlanetGenerator : MonoBehaviour {
-	
+
 	public GameObject planet;
 	GameObject planet_clone;
 
-	SpriteRenderer planetRenderer;
-	Texture2D[] planetTextures;
+    Texture2D[] solids;
+	Texture2D[] overlays;
 
-	bool visible;
+	public Sprite[] solidSprites;
+	public Sprite[] overlaySprites;
 
-	// Use this for initialization
+	GameObject prince;
+	Transform princeTransform;
+
+	Camera camera;
+
 	void Start () {
-		planetTextures = new Texture2D[6];
-		visible = true;
+		camera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<Camera>() ;
+
 		loadTextures ();
 
-		for (int i = 0; i < 15; i++) {
-			createNewPlanet ();
+		solidSprites = createSpriteList (solids);
+		overlaySprites = createSpriteList (overlays);
 
+		for (int i = 0; i <15; i++) {
+			createNewPlanet ();
 		}
 	}
-	public void createNewPlanet(){
-		Texture2D blend = blendTextures ();
 
-		planet_clone = (GameObject)Instantiate (planet, new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (800, 1900)), transform.rotation) as GameObject;
-		planet_clone = (GameObject) Instantiate (planet, new Vector3(40, 40, 1800), transform.rotation) as GameObject;
+	void createNewPlanet(){
+		float randZ = Random.Range (200, 700);
 
-		planetRenderer = planet_clone.GetComponent<SpriteRenderer> ();
-		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
+		float frustumH = calculateFrustumHeight(randZ);
+		float frustumW = calculateFrustumWidth (randZ, frustumH);
+
+		int xRange = (int)frustumW / 2;
+		int yRange = (int)frustumH / 2;
+
+		float randX = Random.Range (-xRange, xRange);
+		float randY = Random.Range (-yRange, yRange);
+
+		planet_clone = (GameObject)Instantiate (planet, new Vector3 (randX, randY , randZ), transform.rotation) as GameObject;
 		planet_clone.tag = "Planet";
+
+		composePlanet (planet_clone);
+		setPlanetRenderOrder (planet_clone);
+	}
+
+	public int calculateHeightRange(float zPos){
+		return (int)(calculateFrustumHeight (zPos) / 2);
+	}
+
+	public int calculateWidthRange(float zPos){
+		float fHeight = calculateFrustumHeight (zPos);
+		return (int)(calculateFrustumWidth (zPos, fHeight) / 2);
+	}
+
+	float calculateFrustumHeight(float distance){
+		return 2.0f * distance * Mathf.Tan(camera.fieldOfView * 0.5f * Mathf.Deg2Rad);
+	}
+
+	float calculateFrustumWidth(float distance, float frustumHeight){
+		return frustumHeight * camera.aspect;
+	}
+
+	public void composePlanet(GameObject planet){
+		if (planet.transform.childCount > 0) {
+			for (int i = planet.transform.childCount-1; i >= 0; i--) {
+				Destroy (planet.transform.GetChild (i).gameObject);
+			}
+		}
+		addLayerAsChild (planet, solidSprites);
+		addLayerAsChild (planet, overlaySprites);
+		addLayerAsChild (planet, overlaySprites);
+		addLayerAsChild (planet, overlaySprites);
 	}
 
 	void loadTextures(){
-		//LoadAll not getting the images in file and returning as list *need to check documentation*
-		//planetTextures = Resources.LoadAll ("PlanetTextures", typeof(Texture2D[])) as Texture2D[];
-
-		planetTextures [0] = Resources.Load ("PlanetTextures/Solids/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
-		planetTextures [1] = Resources.Load ("PlanetTextures/Textures/blueTexture1", typeof(Texture2D)) as Texture2D;
-		planetTextures [2] = Resources.Load ("PlanetTextures/Textures/blueTexture2", typeof(Texture2D)) as Texture2D;
-		planetTextures [3] = Resources.Load ("PlanetTextures/Textures/purpleTexture1", typeof(Texture2D)) as Texture2D;
-		planetTextures [4] = Resources.Load ("PlanetTextures/Textures/purpleTexture2", typeof(Texture2D)) as Texture2D;
-		planetTextures [5] = Resources.Load ("PlanetTextures/Textures/yellowTexture", typeof(Texture2D)) as Texture2D;
-
-		// loading images
-		// planetTextures [6] = Resources.Load ("PlanetTextures/brownSolidTexture1", typeof(Texture2D)) as Texture2D;
-		// planetTextures [7] = Resources.Load ("PlanetTextures/blueTexture1", typeof(Texture2D)) as Texture2D;
-		// planetTextures [8] = Resources.Load ("PlanetTextures/blueTexture2", typeof(Texture2D)) as Texture2D;
-		// planetTextures [9] = Resources.Load ("PlanetTextures/purpleTexture1", typeof(Texture2D)) as Texture2D;
-		// planetTextures [10] = Resources.Load ("PlanetTextures/purpleTexture2", typeof(Texture2D)) as Texture2D;
-		// planetTextures [11] = Resources.Load ("PlanetTextures/yellowTexture", typeof(Texture2D)) as Texture2D;
+		solids = Resources.LoadAll<Texture2D> ("PlanetTextures/Solids");
+		overlays = Resources.LoadAll<Texture2D> ("PlanetTextures/Overlays");
 	}
-
-	//Blends Textures together using AlphaBlend and returns the resulting Texture2D object
-	Texture2D blendTextures(){
 		
-		Texture2D baseTexture = planetTextures[Random.Range(0,4)];
-		Texture2D layer1Texture = planetTextures[Random.Range(2, 6)];
-//		Texture2D layer2Texture = planetTextures[Random.Range(0,planetTextures.Length-1)];
-//		Texture2D detailTexture = planetTextures[Random.Range(0,planetTextures.Length-1)];;
+	void addLayerAsChild(GameObject parent, Sprite[] spriteList){
+		GameObject child = new GameObject ();
+		child.transform.SetParent (parent.transform, false);
+		child.transform.localPosition = Vector3.zero;
 
-		return AlphaBlend (baseTexture, layer1Texture);
+		SpriteRenderer childSR = child.AddComponent<SpriteRenderer> ();
 
+		assignLayer (child, spriteList);
 	}
-	
-//	// Update is called once per frame
-//	void LateUpdate(){
-//		if (!planetRenderer.isVisible) {
-//			relocate ();
-//		}
-//	}
-//
-//	void relocate(){
-////		Texture2D blend = blendTextures ();
-////		planetRenderer.sprite = Sprite.Create(blend, new Rect(0.0f, 0.0f, blend.width, blend.height), new Vector2(0.0f, 0.0f), 10.0f) as Sprite;
-//
-//		// TODO: need to see if the position of the planet can be modified without using translate or addforce
-//		// doesn't work
-//		transform.position = new Vector3 (Random.Range (-800, 800), Random.Range (-800, 800), Random.Range (200, 500));
-//
-//	}
 
+	public void assignLayer(GameObject child, Sprite[] sprites){
+		child.GetComponent<SpriteRenderer> ().sprite = sprites [Random.Range (0, sprites.Length)];
+		addSpinToLayer (child);
+	}
 
+	Sprite[] createSpriteList(Texture2D[] textures){
+		Sprite[] sprites = new Sprite[textures.Length];
 
-	// make sure this code is credited https://answers.unity.com/questions/1008802/merge-multiple-png-images-one-on-top-of-the-other.html
-	public static Texture2D AlphaBlend(Texture2D aBottom, Texture2D aTop)
-	{
-		if (aBottom.width != aTop.width || aBottom.height != aTop.height)
-			throw new System.InvalidOperationException("AlphaBlend only works with two equal sized images");
-		var bData = aBottom.GetPixels();
-		var tData = aTop.GetPixels();
-		int count = bData.Length;
-		var rData = new Color[count];
-		for(int i = 0; i < count; i++)
-		{
-			Color B = bData[i];
-			Color T = tData[i];
-			float srcF = T.a;
-			float destF = 1f - T.a;
-			float alpha = srcF + destF * B.a;
-			Color R = (T * srcF + B * B.a * destF)/alpha;
-			R.a = alpha;
-			rData[i] = R;
+		for(int i = 0;i < sprites.Length;i++) {
+			Texture2D texture = textures [i];
+			sprites[i] = Sprite.Create (texture, new Rect (0.0f, 0.0f, texture.width, texture.height), new Vector2 (0.5f, 0.5f), 3.0f) as Sprite;
 		}
-		var res = new Texture2D(aTop.width, aTop.height);
-		res.SetPixels(rData);
-		res.Apply();
-		return res;
+		return sprites;
 	}
+
+	void addSpinToLayer(GameObject child){
+		if (child.GetComponent<Spin> () == null) {
+			Spin spin = child.AddComponent<Spin> ();
+			spin.speed = Random.Range (-10, 10);
+			spin.axis = Vector3.forward;
+		}
+	}
+
+	public void setPlanetRenderOrder(GameObject planet){
+		SpriteRenderer parentRenderer = planet.GetComponent<SpriteRenderer> ();
+
+		int parentRenderOrder = (int)planet.transform.position.z;
+		parentRenderer.sortingOrder = parentRenderOrder;
+
+		for (int i = 0; i < planet.transform.childCount; i++) {
+			setChildRenderOrder (parentRenderOrder, planet.transform.GetChild (i).GetComponent<SpriteRenderer> (), i);
+		}
+
+	}
+
+	void setChildRenderOrder(int parentRenderOrder, SpriteRenderer childSR, int childNum){
+		childSR.sortingOrder = parentRenderOrder + childNum;
+	}
+
 }
