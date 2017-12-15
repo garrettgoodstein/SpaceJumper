@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Collections.Specialized;
+using UnityEngine.Experimental.UIElements.StyleEnums;
 
 public class PlanetTouchBehavior : MonoBehaviour {
 	GameObject target = null;
+	double initialDist = 0;
+
 
 	void Start () {}
 
@@ -12,7 +16,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		if (Input.touchCount == 1) {
 			// The screen has been touched so store the touch
 			Touch touch = Input.GetTouch (0); 
-
 			if (touch.phase == TouchPhase.Ended) {
 				var touchPosition = touch.position;
 				print ("Touch Position: " + touchPosition);
@@ -24,29 +27,32 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				print ("Screen Touch: " + screenTouch);
 				Vector3 worldTouch = c.ScreenToWorldPoint (new Vector3 (touchPosition.x, touchPosition.y, transform.position.z + 500));
 				print ("World: " + worldTouch);
-				GameObject closestPlanet = findClosestPlanet (touchPosition);
-				Vector3 closestPlanetPosition = closestPlanet.transform.position;
+				target = findClosestPlanet (touchPosition);
 
 				print ("Prince Position: " + transform.position);
 
 				transform.parent.tag = "Planet";
 				transform.parent = null;
 
-				target = closestPlanet;
-//				closestPlanet.tag = "HomePlanet";
+				initialDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
 			}
 		}
 		if (target != null){
-			//@targetCoord = planet coordination
-			//@transform.position = prince
-			Vector3 targetCoord = new Vector3 (target.transform.position.x+50,
-			                    target.transform.position.y+100, target.transform.position.z);
-			float step = Time.deltaTime * 60;
-			transform.position = Vector3.MoveTowards (transform.position, targetCoord, step);
-			if (transform.position == targetCoord) {
+			double currentDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
+			Vector3 finalTargetCoord = new Vector3 (target.transform.position.x+20, target.transform.position.y+160, target.transform.position.z);
+			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x+50, (float)(target.transform.position.y+100+(1/2)*initialDist), target.transform.position.z);
+			float step = Time.deltaTime * 90;
+			if (currentDist >= initialDist / 2) {
+				transform.position = Vector3.MoveTowards (transform.position, halfTargetCoord, step);
+			} 
+			else {
+				transform.position = Vector3.MoveTowards (transform.position, finalTargetCoord, step);
+			}
+			if (transform.position == finalTargetCoord) {
 				target.tag = "HomePlanet";
 				transform.parent = target.transform;
 				target.GetComponent<HomePlanetMove>();
+				target = null;
 			}
 		}
 	}
