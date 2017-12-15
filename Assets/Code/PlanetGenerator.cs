@@ -32,7 +32,7 @@ public class PlanetGenerator : MonoBehaviour {
 	}
 
 	void createNewPlanet(){
-		float randZ = Random.Range (200, 700);
+		float randZ = Random.Range (700, 1200);
 
 		float frustumH = calculateFrustumHeight(randZ);
 		float frustumW = calculateFrustumWidth (randZ, frustumH);
@@ -104,7 +104,7 @@ public class PlanetGenerator : MonoBehaviour {
 
 		for(int i = 0;i < sprites.Length;i++) {
 			Texture2D texture = textures [i];
-			sprites[i] = Sprite.Create (texture, new Rect (0.0f, 0.0f, texture.width, texture.height), new Vector2 (0.5f, 0.5f), 3.0f) as Sprite;
+			sprites[i] = Sprite.Create (texture, new Rect (0.0f, 0.0f, texture.width, texture.height), new Vector2 (0.5f, 0.5f), 5.0f) as Sprite;
 		}
 		return sprites;
 	}
@@ -120,7 +120,7 @@ public class PlanetGenerator : MonoBehaviour {
 	public void setPlanetRenderOrder(GameObject planet){
 		SpriteRenderer parentRenderer = planet.GetComponent<SpriteRenderer> ();
 
-		int parentRenderOrder = (int)planet.transform.position.z;
+		int parentRenderOrder = ((int)planet.transform.position.z%2000);
 		parentRenderer.sortingOrder = parentRenderOrder;
 
 		for (int i = 0; i < planet.transform.childCount; i++) {

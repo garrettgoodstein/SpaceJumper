@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 63055285}
   - component: {fileID: 63055284}
   - component: {fileID: 63055283}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 109427536}
   - component: {fileID: 109427535}
   - component: {fileID: 109427537}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 136729808}
   - component: {fileID: 136729807}
   - component: {fileID: 136729809}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceBackground(1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -402,7 +402,7 @@ SpriteRenderer:
   m_Size: {x: 54.25, y: 46.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!54 &136729807
 Rigidbody:
@@ -453,7 +453,7 @@ GameObject:
   - component: {fileID: 207444728}
   - component: {fileID: 207444729}
   - component: {fileID: 207444730}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 224348466}
   - component: {fileID: 224348465}
   - component: {fileID: 224348464}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RestartButton
   m_TagString: RestartButton
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 230420778}
   - component: {fileID: 230420780}
   - component: {fileID: 230420781}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats(0)orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 331092109}
   - component: {fileID: 331092108}
   - component: {fileID: 331092107}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats(0)orange (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -971,7 +971,7 @@ GameObject:
   - component: {fileID: 357695672}
   - component: {fileID: 357695671}
   - component: {fileID: 357695670}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceBackground (num3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1057,7 +1057,7 @@ SpriteRenderer:
   m_Size: {x: 54.25, y: 46.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &382671559
 GameObject:
@@ -1069,7 +1069,7 @@ GameObject:
   - component: {fileID: 382671561}
   - component: {fileID: 382671560}
   - component: {fileID: 382671562}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LittlePrince
   m_TagString: Prince
   m_Icon: {fileID: 0}
@@ -1105,9 +1105,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingLayerID: -1063224611
+  m_SortingLayer: 4
+  m_SortingOrder: 2010
   m_Sprite: {fileID: 21300000, guid: 6400ac2737e18d747b7a760c31001e9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1116,7 +1116,7 @@ SpriteRenderer:
   m_Size: {x: 4.58, y: 5.72}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &382671561
 Transform:
@@ -1156,7 +1156,7 @@ GameObject:
   - component: {fileID: 389741599}
   - component: {fileID: 389741600}
   - component: {fileID: 389741601}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1303,7 +1303,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2009
   m_Sprite: {fileID: 21300000, guid: 037d5a62f8bfbe64bb6e2c2e599dda0b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1347,7 +1347,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 423080754}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MovingClouds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1394,7 +1394,7 @@ GameObject:
   - component: {fileID: 517090194}
   - component: {fileID: 517090195}
   - component: {fileID: 517090196}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LargeBackgroundLeftRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1545,7 +1545,7 @@ GameObject:
   - component: {fileID: 520202458}
   - component: {fileID: 520202459}
   - component: {fileID: 520202460}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 527549712}
   - component: {fileID: 527549711}
   - component: {fileID: 527549710}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceBackground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1741,7 +1741,7 @@ SpriteRenderer:
   m_Size: {x: 54.25, y: 46.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &550911146
 GameObject:
@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 550911150}
   - component: {fileID: 550911149}
   - component: {fileID: 550911148}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RestartCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1849,7 +1849,7 @@ GameObject:
   - component: {fileID: 668479577}
   - component: {fileID: 668479578}
   - component: {fileID: 668479579}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: MovingCloudsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1958,7 +1958,7 @@ GameObject:
   - component: {fileID: 671092634}
   - component: {fileID: 671092635}
   - component: {fileID: 671092636}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: LargeBackgroundUpDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2084,7 +2084,7 @@ GameObject:
   - component: {fileID: 718713037}
   - component: {fileID: 718713038}
   - component: {fileID: 718713039}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2293,7 +2293,7 @@ GameObject:
   - component: {fileID: 978889173}
   - component: {fileID: 978889172}
   - component: {fileID: 978889171}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceBackground (num1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2390,7 +2390,7 @@ SpriteRenderer:
   m_Size: {x: 54.25, y: 46.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1002051844
 GameObject:
@@ -2461,6 +2461,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 1518279009513502, guid: cc32043fb735ee44dbddba9cc2beaacf, type: 2}
+  solidSprites: []
+  overlaySprites: []
 --- !u!4 &1042713061
 Transform:
   m_ObjectHideFlags: 0
@@ -2485,7 +2487,7 @@ GameObject:
   - component: {fileID: 1107185005}
   - component: {fileID: 1107185004}
   - component: {fileID: 1107185003}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceBackground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2571,7 +2573,7 @@ SpriteRenderer:
   m_Size: {x: 54.25, y: 46.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &1390895083
 GameObject:
@@ -2583,7 +2585,7 @@ GameObject:
   - component: {fileID: 1390895085}
   - component: {fileID: 1390895084}
   - component: {fileID: 1390895086}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PrinceAnimated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2621,7 +2623,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2010
   m_Sprite: {fileID: 21300000, guid: b9efad64c6ec64814ae81b694ca31c45, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2675,7 +2677,7 @@ GameObject:
   - component: {fileID: 1499759588}
   - component: {fileID: 1499759587}
   - component: {fileID: 1499759586}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats(0)orange (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2798,7 +2800,7 @@ GameObject:
   - component: {fileID: 1510983308}
   - component: {fileID: 1510983307}
   - component: {fileID: 1510983306}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats(0)orange (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2920,7 +2922,7 @@ GameObject:
   - component: {fileID: 1597246432}
   - component: {fileID: 1597246431}
   - component: {fileID: 1597246434}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3031,7 +3033,7 @@ GameObject:
   - component: {fileID: 1632727042}
   - component: {fileID: 1632727043}
   - component: {fileID: 1632727044}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3142,7 +3144,7 @@ GameObject:
   - component: {fileID: 1673799189}
   - component: {fileID: 1673799188}
   - component: {fileID: 1673799187}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3254,7 +3256,7 @@ GameObject:
   - component: {fileID: 1716707994}
   - component: {fileID: 1716707995}
   - component: {fileID: 1716707996}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floats (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3376,7 +3378,7 @@ GameObject:
   - component: {fileID: 1762374735}
   - component: {fileID: 1762374734}
   - component: {fileID: 1762374733}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3467,7 +3469,7 @@ GameObject:
   - component: {fileID: 1858757389}
   - component: {fileID: 1858757391}
   - component: {fileID: 1858757390}
-  m_Layer: 5
+  m_Layer: 12
   m_Name: RestartButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3542,7 +3544,7 @@ GameObject:
   - component: {fileID: 2062237610}
   - component: {fileID: 2062237609}
   - component: {fileID: 2062237608}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SpaceBackground (num2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3628,7 +3630,7 @@ SpriteRenderer:
   m_Size: {x: 54.25, y: 46.08}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!1 &2063273968
 GameObject:

@@ -21,9 +21,9 @@ TagManager:
   - 
   - BackgroundImage
   - 
+  - Planets
   - 
-  - 
-  - 
+  - Foreground
   - 
   - 
   - 
@@ -52,4 +52,10 @@ TagManager:
     locked: 0
   - name: AboutText
     uniqueID: 3241259737
+    locked: 0
+  - name: PlanetLayer
+    uniqueID: 1764470505
+    locked: 0
+  - name: Foreground
+    uniqueID: 3231742685
     locked: 0
