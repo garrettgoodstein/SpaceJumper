@@ -54,7 +54,7 @@ public class PlanetRegeneration : MonoBehaviour {
 	}
 		
 	void relocate(){
-		float randZ = Random.Range (1500, 1900);
+		float randZ = Random.Range (450, 500);
 		float zPos = princeOffset + randZ;
 
 		float yRange = generatorScript.calculateHeightRange (randZ);

@@ -39,8 +39,8 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		}
 		if (target != null){
 			double currentDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
-			Vector3 finalTargetCoord = new Vector3 (target.transform.position.x+20, target.transform.position.y+160, target.transform.position.z);
-			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x+50, (float)(target.transform.position.y+100+(1/2)*initialDist), target.transform.position.z);
+			Vector3 finalTargetCoord = new Vector3 (target.transform.position.x, target.transform.position.y+25, target.transform.position.z);
+			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x, (float)(target.transform.position.y+3000+(1/2)*initialDist), target.transform.position.z/2);
 			float step = Time.deltaTime * 90;
 			if (currentDist >= initialDist / 2) {
 				transform.position = Vector3.MoveTowards (transform.position, halfTargetCoord, step);
