@@ -6,6 +6,9 @@ public class PlanetRegeneration : MonoBehaviour {
 
 	bool hasEverBeenVisible;
 
+	float fadingInSpeed;
+	float alphaValue;
+
 	SpriteRenderer sr;
 
 	PlanetGenerator generatorScript;
@@ -18,6 +21,8 @@ public class PlanetRegeneration : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		fadingInSpeed = 10f;
+		alphaValue = 1f;
 
 		hasEverBeenVisible = false;
 
@@ -31,7 +36,7 @@ public class PlanetRegeneration : MonoBehaviour {
 
 	}
 		
-	void LateUpdate(){
+	void Update(){
 		princeOffset = princeTransform.position.z;
 		if (hasEverBeenVisible && !anyChildrenAreVisible()) {
 			relocate ();
@@ -42,17 +47,11 @@ public class PlanetRegeneration : MonoBehaviour {
 					generatorScript.assignLayer (transform.GetChild (i).gameObject, generatorScript.overlaySprites);
 				}
 			}
+//			alphaValue = 1f;
+//			fadeIn ();
 		}
 	}
 
-	bool anyChildrenAreVisible() {
-		foreach(Renderer renderer in sr.GetComponentsInChildren<Renderer>()) {
-			if(renderer.isVisible)
-				return true;
-		}
-		return false;
-	}
-		
 	void relocate(){
 		float randZ = Random.Range (450, 500);
 		float zPos = princeOffset + randZ;
@@ -64,8 +63,33 @@ public class PlanetRegeneration : MonoBehaviour {
 		generatorScript.setPlanetRenderOrder (gameObject);
 	}
 
+	bool anyChildrenAreVisible() {
+		foreach(Renderer renderer in sr.GetComponentsInChildren<Renderer>()) {
+			if(renderer.isVisible)
+				return true;
+		}
+		return false;
+	}
+		
+
+
 	void OnBecameVisible() {
 		hasEverBeenVisible = true;
+	}
+
+	void fadeIn(){
+		Debug.Log ("Fading In");
+		while (alphaValue >= 0) {
+			foreach (SpriteRenderer r in GetComponentsInChildren<SpriteRenderer>()) {
+				Color newColor = r.material.color;
+				newColor.a = alphaValue;
+
+				r.material.SetColor ("_Color", newColor);
+				alphaValue -= Time.deltaTime * fadingInSpeed;
+				Debug.Log(alphaValue);
+			}
+		}
+	
 	}
 		
 }

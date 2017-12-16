@@ -13,7 +13,6 @@ public class PlanetGenerator : MonoBehaviour {
 	public Sprite[] solidSprites;
 	public Sprite[] overlaySprites;
 
-	GameObject prince;
 	Transform princeTransform;
 
 	Camera camera;
@@ -21,12 +20,14 @@ public class PlanetGenerator : MonoBehaviour {
 	void Start () {
 		camera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<Camera>() ;
 
+		princeTransform = GameObject.FindGameObjectWithTag ("Prince").transform;
+
 		loadTextures ();
 
 		solidSprites = createSpriteList (solids);
 		overlaySprites = createSpriteList (overlays);
 
-		for (int i = 0; i <15; i++) {
+		for (int i = 0; i <30; i++) {
 			createNewPlanet ();
 		}
 	}
@@ -96,6 +97,7 @@ public class PlanetGenerator : MonoBehaviour {
 
 	public void assignLayer(GameObject child, Sprite[] sprites){
 		child.GetComponent<SpriteRenderer> ().sprite = sprites [Random.Range (0, sprites.Length)];
+//		initializeTransparency (child.GetComponent<SpriteRenderer> ());
 		addSpinToLayer (child);
 	}
 
@@ -112,7 +114,7 @@ public class PlanetGenerator : MonoBehaviour {
 	void addSpinToLayer(GameObject child){
 		if (child.GetComponent<Spin> () == null) {
 			Spin spin = child.AddComponent<Spin> ();
-			spin.speed = Random.Range (-10, 10);
+			spin.speed = Random.Range (-5, 5);
 			spin.axis = Vector3.forward;
 		}
 	}
@@ -120,7 +122,7 @@ public class PlanetGenerator : MonoBehaviour {
 	public void setPlanetRenderOrder(GameObject planet){
 		SpriteRenderer parentRenderer = planet.GetComponent<SpriteRenderer> ();
 
-		int parentRenderOrder = ((int)planet.transform.position.z%2000);
+		int parentRenderOrder = -((int)planet.transform.position.z%2000)*5;
 		parentRenderer.sortingOrder = parentRenderOrder;
 
 		for (int i = 0; i < planet.transform.childCount; i++) {
@@ -132,5 +134,11 @@ public class PlanetGenerator : MonoBehaviour {
 	void setChildRenderOrder(int parentRenderOrder, SpriteRenderer childSR, int childNum){
 		childSR.sortingOrder = parentRenderOrder + childNum;
 	}
+
+//	void initializeTransparency(SpriteRenderer sr){
+//		Color color = sr.material.color;
+//		color.a = 1f;
+//		sr.material.SetColor ("_Color", color);
+//	}
 
 }
