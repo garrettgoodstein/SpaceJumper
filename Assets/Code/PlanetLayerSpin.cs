@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spin : MonoBehaviour {
+public class PlanetLayerSpin : MonoBehaviour {
 
 	public float speed = 10f;
 	public Vector3 axis = Vector3.up;
