@@ -70,13 +70,11 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				transform.position = Vector3.MoveTowards (transform.position, finalTargetCoord, step);
 			}
 			if (transform.position == finalTargetCoord) {
-				anim.SetInteger ("PlayerState", 0);
-
 				target.tag = "HomePlanet";
-
 				transform.parent = target.transform;
 				target.GetComponent<HomePlanetMove>();
 				target = null;
+				anim.SetInteger ("PlayerState", 0);
 			}
 		}
 
