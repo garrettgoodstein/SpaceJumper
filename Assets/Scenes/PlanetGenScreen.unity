@@ -339,9 +339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 136729805}
   - component: {fileID: 136729806}
-  - component: {fileID: 136729808}
   - component: {fileID: 136729807}
-  - component: {fileID: 136729809}
   m_Layer: 0
   m_Name: SpaceBackgroundDown
   m_TagString: Untagged
@@ -419,28 +417,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
---- !u!114 &136729808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 136729804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &136729809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 136729804}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &207444725
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,7 +823,6 @@ GameObject:
   m_Component:
   - component: {fileID: 357695669}
   - component: {fileID: 357695672}
-  - component: {fileID: 357695671}
   - component: {fileID: 357695670}
   m_Layer: 0
   m_Name: SpaceBackgroundRight
@@ -884,17 +859,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
---- !u!114 &357695671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 357695668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &357695672
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1316,10 +1280,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 517090193}
-  - component: {fileID: 517090197}
   - component: {fileID: 517090194}
   - component: {fileID: 517090195}
-  - component: {fileID: 517090196}
   m_Layer: 0
   m_Name: LargeBackgroundLeftRight
   m_TagString: Untagged
@@ -1435,30 +1397,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &517090196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517090192}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90bdffa0b5ec402b9c6fab76edaac3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundSize: 0
---- !u!114 &517090197
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 517090192}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90bdffa0b5ec402b9c6fab76edaac3a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundSize: 0
 --- !u!1 &520202455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,7 +1517,6 @@ GameObject:
   m_Component:
   - component: {fileID: 527549709}
   - component: {fileID: 527549712}
-  - component: {fileID: 527549711}
   - component: {fileID: 527549710}
   m_Layer: 0
   m_Name: SpaceBackgroundMiddle
@@ -1616,17 +1553,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
---- !u!114 &527549711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 527549708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &527549712
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2124,7 +2050,6 @@ GameObject:
   - component: {fileID: 978889174}
   - component: {fileID: 978889173}
   - component: {fileID: 978889172}
-  - component: {fileID: 978889171}
   m_Layer: 0
   m_Name: SpaceBackgroundLeft
   m_TagString: Untagged
@@ -2145,17 +2070,6 @@ Transform:
   m_Father: {fileID: 517090193}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &978889171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 978889169}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &978889172
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2177,7 +2091,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 978889169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
   m_Name: 
@@ -2293,6 +2207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 1518279009513502, guid: cc32043fb735ee44dbddba9cc2beaacf, type: 2}
+  solidSprites: []
+  overlaySprites: []
 --- !u!4 &1042713061
 Transform:
   m_ObjectHideFlags: 0
@@ -2315,7 +2231,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1107185002}
   - component: {fileID: 1107185005}
-  - component: {fileID: 1107185004}
   - component: {fileID: 1107185003}
   m_Layer: 0
   m_Name: SpaceBackgroundUp
@@ -2352,17 +2267,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 72
   m_CollisionDetection: 0
---- !u!114 &1107185004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1107185001}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1107185005
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2537,8 +2441,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1510983305}
   - component: {fileID: 1510983310}
-  - component: {fileID: 1510983309}
-  - component: {fileID: 1510983308}
   - component: {fileID: 1510983307}
   - component: {fileID: 1510983306}
   m_Layer: 0
@@ -2587,28 +2489,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1510983308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1510983304}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1510983309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1510983304}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1510983310
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3251,7 +3131,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062237606}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6c2e22de94724b14b87161899b14a2d8, type: 3}
   m_Name: 
