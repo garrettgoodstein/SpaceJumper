@@ -58,6 +58,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 	}
 
 	private GameObject findClosestPlanet(Vector2 touch) 
+	// https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html has the original code this method was based off from 
 	{
 		GameObject[] gos;
 		gos = GameObject.FindGameObjectsWithTag("Planet");
