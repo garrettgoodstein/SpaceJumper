@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 136729807}
   - component: {fileID: 136729809}
   m_Layer: 0
-  m_Name: SpaceBackground(1)
+  m_Name: SpaceBackgroundDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 357695671}
   - component: {fileID: 357695670}
   m_Layer: 0
-  m_Name: SpaceBackground (num3)
+  m_Name: SpaceBackgroundRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,7 +1582,7 @@ GameObject:
   - component: {fileID: 527549711}
   - component: {fileID: 527549710}
   m_Layer: 0
-  m_Name: SpaceBackground (2)
+  m_Name: SpaceBackgroundMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1682,7 +1682,7 @@ GameObject:
   - component: {fileID: 668479578}
   - component: {fileID: 668479579}
   m_Layer: 0
-  m_Name: MovingCloudsBackground
+  m_Name: CloudZero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2126,7 +2126,7 @@ GameObject:
   - component: {fileID: 978889172}
   - component: {fileID: 978889171}
   m_Layer: 0
-  m_Name: SpaceBackground (num1)
+  m_Name: SpaceBackgroundLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2293,8 +2293,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planet: {fileID: 1518279009513502, guid: cc32043fb735ee44dbddba9cc2beaacf, type: 2}
-  solidSprites: []
-  overlaySprites: []
 --- !u!4 &1042713061
 Transform:
   m_ObjectHideFlags: 0
@@ -2320,7 +2318,7 @@ GameObject:
   - component: {fileID: 1107185004}
   - component: {fileID: 1107185003}
   m_Layer: 0
-  m_Name: SpaceBackground (3)
+  m_Name: SpaceBackgroundUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3213,7 +3211,7 @@ GameObject:
   - component: {fileID: 2062237609}
   - component: {fileID: 2062237608}
   m_Layer: 0
-  m_Name: SpaceBackground (num2)
+  m_Name: SpaceBackgroundMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
