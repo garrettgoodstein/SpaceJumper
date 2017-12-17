@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovingCloudsBehavior : MonoBehaviour {
-	// This script monitors the clouds moving in the backgrounds.
+public class FloatsUsed : MonoBehaviour {
 
 	static float THRESHOLD = 30;
 
