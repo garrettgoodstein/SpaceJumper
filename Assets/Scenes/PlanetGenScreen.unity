@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 63055284}
   - component: {fileID: 63055283}
   m_Layer: 0
-  m_Name: floats (8)
+  m_Name: CloudEight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ Transform:
   m_LocalScale: {x: 300, y: 300, z: 0.51331}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 20, y: 10, z: 10}
 --- !u!114 &63055283
 MonoBehaviour:
@@ -232,7 +232,7 @@ GameObject:
   - component: {fileID: 109427535}
   - component: {fileID: 109427537}
   m_Layer: 0
-  m_Name: floats (1)
+  m_Name: CloudOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ Transform:
   m_LocalScale: {x: 7000, y: 7000, z: 1}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &109427534
 SpriteRenderer:
@@ -454,7 +454,7 @@ GameObject:
   - component: {fileID: 207444729}
   - component: {fileID: 207444730}
   m_Layer: 0
-  m_Name: floats (5)
+  m_Name: CloudFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +471,7 @@ Transform:
   m_LocalScale: {x: 600.868, y: 589.98566, z: 1.0106049}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &207444727
 SpriteRenderer:
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 230420780}
   - component: {fileID: 230420781}
   m_Layer: 0
-  m_Name: floats(0)orange
+  m_Name: GreenCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -705,7 +705,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 1
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &230420777
 SpriteRenderer:
@@ -1031,7 +1031,7 @@ GameObject:
   - component: {fileID: 331092108}
   - component: {fileID: 331092107}
   m_Layer: 0
-  m_Name: floats(0)orange (2)
+  m_Name: BlueCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1336,7 +1336,7 @@ GameObject:
   - component: {fileID: 389741600}
   - component: {fileID: 389741601}
   m_Layer: 0
-  m_Name: floats (2)
+  m_Name: CloudTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1353,7 +1353,7 @@ Transform:
   m_LocalScale: {x: 5000, y: 8589.89, z: 0.51331365}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 5, z: 500}
 --- !u!212 &389741598
 SpriteRenderer:
@@ -1594,7 +1594,6 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 668479575}
-  - {fileID: 230420776}
   - {fileID: 109427533}
   - {fileID: 389741597}
   - {fileID: 1716707991}
@@ -1605,9 +1604,10 @@ Transform:
   - {fileID: 63055282}
   - {fileID: 1597246430}
   - {fileID: 1499759585}
+  - {fileID: 230420776}
   - {fileID: 331092106}
-  - {fileID: 1510983305}
   - {fileID: 1673799186}
+  - {fileID: 1510983305}
   m_Father: {fileID: 1762374737}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1775,7 +1775,7 @@ GameObject:
   - component: {fileID: 520202459}
   - component: {fileID: 520202460}
   m_Layer: 0
-  m_Name: floats (4)
+  m_Name: CloudFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1792,7 +1792,7 @@ Transform:
   m_LocalScale: {x: 500, y: 565.3155, z: 0.9975306}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 20}
 --- !u!212 &520202457
 SpriteRenderer:
@@ -2314,7 +2314,7 @@ GameObject:
   - component: {fileID: 718713038}
   - component: {fileID: 718713039}
   m_Layer: 0
-  m_Name: floats (6)
+  m_Name: CloudSix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2331,7 +2331,7 @@ Transform:
   m_LocalScale: {x: 1000, y: 1000, z: 0.5285049}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 3, y: 0, z: 0}
 --- !u!212 &718713037
 SpriteRenderer:
@@ -2816,7 +2816,7 @@ GameObject:
   - component: {fileID: 1499759587}
   - component: {fileID: 1499759586}
   m_Layer: 0
-  m_Name: floats(0)orange (1)
+  m_Name: OrangeCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2833,7 +2833,7 @@ Transform:
   m_LocalScale: {x: 1000, y: 1000, z: 1}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1499759586
 MonoBehaviour:
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 1510983307}
   - component: {fileID: 1510983306}
   m_Layer: 0
-  m_Name: floats(0)orange (3)
+  m_Name: YellowCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2956,7 +2956,7 @@ Transform:
   m_LocalScale: {x: 10000, y: 10000, z: 1}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1510983306
 MonoBehaviour:
@@ -3061,7 +3061,7 @@ GameObject:
   - component: {fileID: 1597246431}
   - component: {fileID: 1597246434}
   m_Layer: 0
-  m_Name: floats (9)
+  m_Name: CloudNine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3078,7 +3078,7 @@ Transform:
   m_LocalScale: {x: 1000.0002, y: 1083.4159, z: 0.52851003}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 1, y: 0, z: 0}
 --- !u!54 &1597246431
 Rigidbody:
@@ -3172,7 +3172,7 @@ GameObject:
   - component: {fileID: 1632727043}
   - component: {fileID: 1632727044}
   m_Layer: 0
-  m_Name: floats (7)
+  m_Name: CloudSeven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3189,7 +3189,7 @@ Transform:
   m_LocalScale: {x: 400, y: 400, z: 1.02607}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1632727041
 SpriteRenderer:
@@ -3283,7 +3283,7 @@ GameObject:
   - component: {fileID: 1673799188}
   - component: {fileID: 1673799187}
   m_Layer: 0
-  m_Name: floats (10)
+  m_Name: RedCloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3300,7 +3300,7 @@ Transform:
   m_LocalScale: {x: 10000, y: 10000, z: 0.51331}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 5, z: 0}
 --- !u!114 &1673799187
 MonoBehaviour:
@@ -3395,7 +3395,7 @@ GameObject:
   - component: {fileID: 1716707995}
   - component: {fileID: 1716707996}
   m_Layer: 0
-  m_Name: floats (3)
+  m_Name: CloudThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3412,7 +3412,7 @@ Transform:
   m_LocalScale: {x: 200.149, y: 276.9714, z: 1}
   m_Children: []
   m_Father: {fileID: 423080754}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!212 &1716707992
 SpriteRenderer:

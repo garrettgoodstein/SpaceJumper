@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollLeftRight: MonoBehaviour {
+public class LeftRightBackgroundBehavior: MonoBehaviour {
+	\\ This gives infinite Background from left to right
 
 public float backgroundSize;
 

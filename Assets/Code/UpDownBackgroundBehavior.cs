@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScrollBackground : MonoBehaviour {
+public class UpDownBackgroundBehavior : MonoBehaviour {
+	\\This gives the infite up and down background
 
 	public float backgroundSize;
 

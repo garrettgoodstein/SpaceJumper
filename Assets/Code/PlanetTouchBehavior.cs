@@ -5,6 +5,7 @@ using System;
 
 public class PlanetTouchBehavior : MonoBehaviour {
 	GameObject target = null;
+	bool jump = false;
 
 	void Start () {}
 
@@ -36,7 +37,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 //				closestPlanet.tag = "HomePlanet";
 			}
 		}
-		if (target != null){
+		if (target != null) {
 			//@targetCoord = planet coordination
 			//@transform.position = prince
 			Vector3 targetCoord = new Vector3 (target.transform.position.x+50,
@@ -45,10 +46,12 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			transform.position = Vector3.MoveTowards (transform.position, targetCoord, step);
 			if (transform.position == targetCoord) {
 				target.tag = "HomePlanet";
+				jump = true;
 				transform.parent = target.transform;
 				target.GetComponent<HomePlanetMove>();
 			}
 		}
+
 	}
 
 	private GameObject findClosestPlanet(Vector2 touch) 
