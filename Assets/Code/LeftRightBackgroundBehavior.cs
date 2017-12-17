@@ -20,11 +20,8 @@ public float backgroundSize;
 		for (int i = 0; i < transform.childCount; i++){
 			layers[i] = transform.GetChild(i);
 		}
-
 		leftIndex = 0;
 		rightIndex = layers.Length -1;
-
-	
 	}
 
 	private void ScrollLeft()
@@ -36,8 +33,6 @@ public float backgroundSize;
 		if(rightIndex < 0) {
 			rightIndex = layers.Length-1;
 		}
-
-
 	}
 
 	private void ScrollRight()
@@ -48,8 +43,6 @@ public float backgroundSize;
 		leftIndex++;
 		if(leftIndex == layers.Length) 
 			leftIndex = 0;
-
-		
 	}
 
 	private void Update()
