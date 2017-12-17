@@ -45,11 +45,11 @@ A) Yes and no. You can run the game on a computer, but unless your computer has 
 
 Q) What's the point of the game? 
 
-A) You control the prince and you tap on a planet you would like to go. You keep tapping away while nejoying the background music and the handdrawn artwork. You don't have to do multiple taps, swipes, or any fancy finger movement. A simple tap will do. 
+A) You control the prince and you tap on a planet you would like to go. You keep tapping away while enjoying the background music and the hand drawn artwork. You don't have to do multiple taps, swipes, or any fancy finger movement. A simple tap will do. 
 
 Q) How is this a game if it has no objectives, missions, or scores?
 
-A)  We believe the game itself is playable because its simple premise will entice users to come back, do some jumps, and go back to their lives. 
+A)  We believe the game itself is playable because its simple premise will entice users to come back, do some jumps, and go back to their regular lives. Planet exploration via jumps is addicting. 
 
 ## Conclusion
 
