@@ -3,19 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Runtime.InteropServices;
 
-// SpaceWanderer 
-// October 19th, 2017
-// Team Anhagama 
-
 public class PlanetMovement : MonoBehaviour {
 	float xSpeed;
 	float ySpeed;
 	float zSpeed;
 
-
 	// Use this for initialization
 	void Start () {
-
 		xSpeed = Random.Range (-1f, 1f);
 		ySpeed = Random.Range (-1f, 1f);
 		zSpeed = 0f;
@@ -30,8 +24,6 @@ public class PlanetMovement : MonoBehaviour {
 //			zSpeed = 0.0f; 
 //
 //		}
-			
-
 	}
 
 	// Update is called once per frame
@@ -47,5 +39,4 @@ public class PlanetMovement : MonoBehaviour {
 		transform.Translate(xSpeed, ySpeed, zSpeed);
 		transform.localScale += new Vector3 (0.1f, 0.1f, 0.1f);
 	}
-		
 }
