@@ -165,7 +165,7 @@ PlayerSettings:
   iOSTargetOSVersionString: 7.0
   tvOSSdkVersion: 0
   tvOSRequireExtendedGameController: 0
-  tvOSTargetOSVersionString: 
+  tvOSTargetOSVersionString: 9.0
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
@@ -233,7 +233,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: a003c2e4c0b338f418e98a510bc6a961, type: 3}
+      m_Icon: {fileID: 2800000, guid: e4bec468d8f39e84690536fc4e91086b, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching:

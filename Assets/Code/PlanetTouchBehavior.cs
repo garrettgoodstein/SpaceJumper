@@ -2,10 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Collections.Specialized;
+using UnityEngine.Experimental.UIElements.StyleEnums;
 
 public class PlanetTouchBehavior : MonoBehaviour {
 	GameObject target = null;
-	bool jump = false;
+// <<<<<<< HEAD
+// 	bool jump = false;
+// =======
+	double initialDist = 0;
+
+// >>>>>>> cec631879931abf44c38a180ce0be58f15830fe2
 
 	void Start () {}
 
@@ -13,7 +20,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		if (Input.touchCount == 1) {
 			// The screen has been touched so store the touch
 			Touch touch = Input.GetTouch (0); 
-
 			if (touch.phase == TouchPhase.Ended) {
 				var touchPosition = touch.position;
 				print ("Touch Position: " + touchPosition);
@@ -25,36 +31,51 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				print ("Screen Touch: " + screenTouch);
 				Vector3 worldTouch = c.ScreenToWorldPoint (new Vector3 (touchPosition.x, touchPosition.y, transform.position.z + 500));
 				print ("World: " + worldTouch);
-				GameObject closestPlanet = findClosestPlanet (touchPosition);
-				Vector3 closestPlanetPosition = closestPlanet.transform.position;
+				target = findClosestPlanet (touchPosition);
 
 				print ("Prince Position: " + transform.position);
 
 				transform.parent.tag = "Planet";
 				transform.parent = null;
 
-				target = closestPlanet;
-//				closestPlanet.tag = "HomePlanet";
+				initialDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
 			}
 		}
-		if (target != null) {
-			//@targetCoord = planet coordination
-			//@transform.position = prince
-			Vector3 targetCoord = new Vector3 (target.transform.position.x+50,
-			                    target.transform.position.y+100, target.transform.position.z);
-			float step = Time.deltaTime * 60;
-			transform.position = Vector3.MoveTowards (transform.position, targetCoord, step);
-			if (transform.position == targetCoord) {
+// <<<<<<< HEAD
+// 		if (target != null) {
+// 			//@targetCoord = planet coordination
+// 			//@transform.position = prince
+// 			Vector3 targetCoord = new Vector3 (target.transform.position.x+50,
+// 			                    target.transform.position.y+100, target.transform.position.z);
+// 			float step = Time.deltaTime * 60;
+// 			transform.position = Vector3.MoveTowards (transform.position, targetCoord, step);
+// 			if (transform.position == targetCoord) {
+// =======
+		if (target != null){
+			double currentDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
+			Vector3 finalTargetCoord = new Vector3 (target.transform.position.x, target.transform.position.y+25, target.transform.position.z);
+			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x, (float)(target.transform.position.y+3000+(1/2)*initialDist), target.transform.position.z/2);
+			float step = Time.deltaTime * 90;
+			if (currentDist >= initialDist / 2) {
+				transform.position = Vector3.MoveTowards (transform.position, halfTargetCoord, step);
+			} 
+			else {
+				transform.position = Vector3.MoveTowards (transform.position, finalTargetCoord, step);
+			}
+			if (transform.position == finalTargetCoord) {
+// >>>>>>> cec631879931abf44c38a180ce0be58f15830fe2
 				target.tag = "HomePlanet";
 				jump = true;
 				transform.parent = target.transform;
 				target.GetComponent<HomePlanetMove>();
+				target = null;
 			}
 		}
 
 	}
 
 	private GameObject findClosestPlanet(Vector2 touch) 
+	// https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html has the original code this method was based off from 
 	{
 		GameObject[] gos;
 		gos = GameObject.FindGameObjectsWithTag("Planet");
