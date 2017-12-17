@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 136729807}
   - component: {fileID: 136729809}
   m_Layer: 0
-  m_Name: SpaceBackground(1)
+  m_Name: SpaceBackgroundUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -394,15 +394,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 21300000, guid: c0f535bfe04505142abbd5f4db8ac97c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.25, y: 46.08}
+  m_Size: {x: 79.79, y: 59.649998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!54 &136729807
 Rigidbody:
@@ -850,7 +850,7 @@ GameObject:
   - component: {fileID: 357695671}
   - component: {fileID: 357695670}
   m_Layer: 0
-  m_Name: SpaceBackground (num3)
+  m_Name: SpaceBackgroundRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -927,15 +927,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 21300000, guid: c0f535bfe04505142abbd5f4db8ac97c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
+  m_Color: {r: 0.022058845, g: 0.020761266, b: 0.020761266, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.25, y: 46.08}
+  m_Size: {x: 79.79, y: 59.649998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!1 &382671559
 GameObject:
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 517090192}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d90bdffa0b5ec402b9c6fab76edaac3a, type: 3}
   m_Name: 
@@ -1501,7 +1501,7 @@ GameObject:
   - component: {fileID: 527549711}
   - component: {fileID: 527549710}
   m_Layer: 0
-  m_Name: SpaceBackground (2)
+  m_Name: SpaceBackgroundMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1578,15 +1578,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 21300000, guid: c0f535bfe04505142abbd5f4db8ac97c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.25, y: 46.08}
+  m_Size: {x: 79.79, y: 59.649998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!1 &668479574
 GameObject:
@@ -1972,7 +1972,7 @@ GameObject:
   - component: {fileID: 978889172}
   - component: {fileID: 978889171}
   m_Layer: 0
-  m_Name: SpaceBackground (num1)
+  m_Name: SpaceBackgroundLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2060,15 +2060,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 21300000, guid: c0f535bfe04505142abbd5f4db8ac97c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.25, y: 46.08}
+  m_Size: {x: 79.79, y: 59.649998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!1 &1002051844
 GameObject:
@@ -2166,7 +2166,7 @@ GameObject:
   - component: {fileID: 1107185004}
   - component: {fileID: 1107185003}
   m_Layer: 0
-  m_Name: SpaceBackground (3)
+  m_Name: SpaceBackgroundDown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2243,15 +2243,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 21300000, guid: c0f535bfe04505142abbd5f4db8ac97c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.25, y: 46.08}
+  m_Size: {x: 79.79, y: 59.649998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!1 &1499759584
 GameObject:
@@ -2996,7 +2996,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.17128026, g: 0.38775948, b: 0.72794116, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -3051,7 +3051,7 @@ GameObject:
   - component: {fileID: 2062237609}
   - component: {fileID: 2062237608}
   m_Layer: 0
-  m_Name: SpaceBackground (num2)
+  m_Name: SpaceBackgroundMiddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3128,15 +3128,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -32768
-  m_Sprite: {fileID: 21300000, guid: c0f535bfe04505142abbd5f4db8ac97c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 5c8dab59594d44d6cb21d6207e19e23f, type: 3}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 54.25, y: 46.08}
+  m_Size: {x: 79.79, y: 59.649998}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
 --- !u!1 &2063273968
 GameObject:
