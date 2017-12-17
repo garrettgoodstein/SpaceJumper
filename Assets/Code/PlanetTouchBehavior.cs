@@ -7,20 +7,26 @@ using UnityEngine.Experimental.UIElements.StyleEnums;
 
 public class PlanetTouchBehavior : MonoBehaviour {
 	GameObject target = null;
-// <<<<<<< HEAD
- 	bool jump = false;
-// =======
+	Animator anim;
+
 	double initialDist = 0;
 
-// >>>>>>> cec631879931abf44c38a180ce0be58f15830fe2
 
-	void Start () {}
+	void Start () {
+		anim = GetComponent<Animator> ();
+		anim.SetInteger ("PlayerState", 0);
+		Debug.Log (anim.GetInteger("PlayerState"));
+	}
 
 	void Update () {
 		if (Input.touchCount == 1) {
 			// The screen has been touched so store the touch
+			anim.SetInteger ("PlayerState", 1);
+
 			Touch touch = Input.GetTouch (0); 
 			if (touch.phase == TouchPhase.Ended) {
+				
+
 				var touchPosition = touch.position;
 				print ("Touch Position: " + touchPosition);
 				Camera c = Camera.main;
@@ -54,18 +60,20 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		if (target != null){
 			double currentDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
 			Vector3 finalTargetCoord = new Vector3 (target.transform.position.x, target.transform.position.y+25, target.transform.position.z);
-			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x, (float)(target.transform.position.y+3000+(1/2)*initialDist), target.transform.position.z/2);
+			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x, (float)(target.transform.position.y+20+(1/2)*initialDist), target.transform.position.z/2);
 			float step = Time.deltaTime * 90;
 			if (currentDist >= initialDist / 2) {
 				transform.position = Vector3.MoveTowards (transform.position, halfTargetCoord, step);
 			} 
 			else {
+				anim.SetInteger ("PlayerState", 2);
 				transform.position = Vector3.MoveTowards (transform.position, finalTargetCoord, step);
 			}
 			if (transform.position == finalTargetCoord) {
-// >>>>>>> cec631879931abf44c38a180ce0be58f15830fe2
+				anim.SetInteger ("PlayerState", 0);
+
 				target.tag = "HomePlanet";
-				jump = true;
+
 				transform.parent = target.transform;
 				target.GetComponent<HomePlanetMove>();
 				target = null;
