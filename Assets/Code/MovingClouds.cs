@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloatsUsed : MonoBehaviour {
+public class MovingClouds: MonoBehaviour {
 
 	static float THRESHOLD = 30;
 
