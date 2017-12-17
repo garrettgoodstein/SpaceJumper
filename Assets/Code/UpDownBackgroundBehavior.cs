@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UpDownBackgroundBehavior : MonoBehaviour {
-	\\This gives the infite up and down background
+	//This gives the infite up and down background
 
 	public float backgroundSize;
 

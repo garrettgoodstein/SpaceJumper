@@ -8,7 +8,7 @@ using UnityEngine.Experimental.UIElements.StyleEnums;
 public class PlanetTouchBehavior : MonoBehaviour {
 	GameObject target = null;
 // <<<<<<< HEAD
-// 	bool jump = false;
+ 	bool jump = false;
 // =======
 	double initialDist = 0;
 
