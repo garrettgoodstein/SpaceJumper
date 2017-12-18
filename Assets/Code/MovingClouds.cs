@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingClouds: MonoBehaviour {
 	// This method is responsible for moving the clouds in various directions. 
 
-	static float THRESHOLD = 30;
+	static float THRESHOLD = 15;
 
 	float initX;
 	float initY;

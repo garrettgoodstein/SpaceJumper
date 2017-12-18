@@ -6,7 +6,7 @@ public class BackgroundBehavior : MonoBehaviour {
 	// This class is responsible for allowing background objects to move in various directions 
 	// to give a fluid experience. 
 
-	static float THRESHOLD = 80; // This threshold is needed to ensure that the background does not go too far in one direction. 
+	static float THRESHOLD = 10; // This threshold is needed to ensure that the background does not go too far in one direction. 
 
 	// axis variables for the background
 	float initX;
@@ -25,7 +25,7 @@ public class BackgroundBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int randTypeForce = Random.Range (0, 3); // Picks a random number between 0 and 3 to determine the direction to go to. 
-		int force = Random.Range (30,50); // Picks a random force between 30 and 50. 
+		int force = Random.Range (5,10); // Picks a random force between 30 and 50. 
 
 		if (randTypeForce == 0) {
 			rb.AddForce (0, force, 0); // move up 
