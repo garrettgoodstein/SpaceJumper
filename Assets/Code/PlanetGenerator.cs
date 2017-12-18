@@ -32,6 +32,25 @@ public class PlanetGenerator : MonoBehaviour {
 		}
 	}
 
+	//Loads the planet layers from the resource folder and stores the textures in an array
+	void loadTextures(){
+		solids = Resources.LoadAll<Texture2D> ("PlanetTextures/Solids");
+		overlays = Resources.LoadAll<Texture2D> ("PlanetTextures/Overlays");
+	}
+
+	//Creates sprites out of each layer and stores them in an array
+	//This allows for faster processing and no lag while planets are changed
+	Sprite[] createSpriteList(Texture2D[] textures){
+		Sprite[] sprites = new Sprite[textures.Length];
+
+		for(int i = 0;i < sprites.Length;i++) {
+			Texture2D texture = textures [i];
+			sprites[i] = Sprite.Create (texture, new Rect (0.0f, 0.0f, texture.width, texture.height), new Vector2 (0.5f, 0.5f), 20.0f) as Sprite;
+		}
+		return sprites;
+	}
+
+	//Instantiates a planet clone using created planet prefab and assigns sprite layers as children to the game object
 	void createNewPlanet(){
 		float randZ = Random.Range (200, 500);
 
@@ -51,23 +70,28 @@ public class PlanetGenerator : MonoBehaviour {
 		setPlanetRenderOrder (planet_clone);
 	}
 
+	//Calculates the camera frame height depending on the z-position of the planet object so the planet will be generated in the bounds of the camera frame
 	public int calculateHeightRange(float zPos){
 		return (int)(calculateFrustumHeight (zPos) / 2);
 	}
-
+		
+	//Calculates the camera frame width depending on the z-position of the planet object so the planet will be generated in the bounds of the camera frame
 	public int calculateWidthRange(float zPos){
 		float fHeight = calculateFrustumHeight (zPos);
 		return (int)(calculateFrustumWidth (zPos, fHeight) / 2);
 	}
 
+	//Calculates the height of the frustum plane at a given z-position
 	float calculateFrustumHeight(float distance){
 		return 2.0f * distance * Mathf.Tan(camera.fieldOfView * 0.5f * Mathf.Deg2Rad);
 	}
 
+	//Calculates the width of the frustum plane at a given z-position
 	float calculateFrustumWidth(float distance, float frustumHeight){
 		return frustumHeight * camera.aspect;
 	}
 
+	//Given a planet game object, any previous layers of the planet are destroyed and new layers replace them.
 	public void composePlanet(GameObject planet){
 		if (planet.transform.childCount > 0) {
 			for (int i = planet.transform.childCount-1; i >= 0; i--) {
@@ -80,11 +104,7 @@ public class PlanetGenerator : MonoBehaviour {
 		addLayerAsChild (planet, overlaySprites);
 	}
 
-	void loadTextures(){
-		solids = Resources.LoadAll<Texture2D> ("PlanetTextures/Solids");
-		overlays = Resources.LoadAll<Texture2D> ("PlanetTextures/Overlays");
-	}
-		
+	//Adds a planet layer as a sprite to the current parent planet game object
 	void addLayerAsChild(GameObject parent, Sprite[] spriteList){
 		GameObject child = new GameObject ();
 		child.transform.SetParent (parent.transform, false);
@@ -101,16 +121,7 @@ public class PlanetGenerator : MonoBehaviour {
 		addSpinToLayer (child);
 	}
 
-	Sprite[] createSpriteList(Texture2D[] textures){
-		Sprite[] sprites = new Sprite[textures.Length];
-
-		for(int i = 0;i < sprites.Length;i++) {
-			Texture2D texture = textures [i];
-			sprites[i] = Sprite.Create (texture, new Rect (0.0f, 0.0f, texture.width, texture.height), new Vector2 (0.5f, 0.5f), 20.0f) as Sprite;
-		}
-		return sprites;
-	}
-
+	//adds spin to each planet layer individually to give cool cloud effect
 	void addSpinToLayer(GameObject child){
 		if (child.GetComponent<PlanetLayerSpin> () == null) {
 			PlanetLayerSpin spin = child.AddComponent<PlanetLayerSpin> ();
@@ -119,6 +130,7 @@ public class PlanetGenerator : MonoBehaviour {
 		}
 	}
 
+	//sets the overal planet object's render order so the closer planets get rendered in front of further planets
 	public void setPlanetRenderOrder(GameObject planet){
 		SpriteRenderer parentRenderer = planet.GetComponent<SpriteRenderer> ();
 
@@ -128,17 +140,10 @@ public class PlanetGenerator : MonoBehaviour {
 		for (int i = 0; i < planet.transform.childCount; i++) {
 			setChildRenderOrder (parentRenderOrder, planet.transform.GetChild (i).GetComponent<SpriteRenderer> (), i);
 		}
-
 	}
 
+	//Sets the render order for each layer so they appear correctly
 	void setChildRenderOrder(int parentRenderOrder, SpriteRenderer childSR, int childNum){
 		childSR.sortingOrder = parentRenderOrder + childNum;
 	}
-
-//	void initializeTransparency(SpriteRenderer sr){
-//		Color color = sr.material.color;
-//		color.a = 1f;
-//		sr.material.SetColor ("_Color", color);
-//	}
-
 }

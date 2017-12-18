@@ -6,9 +6,6 @@ public class PlanetRegeneration : MonoBehaviour {
 
 	bool hasEverBeenVisible;
 
-	float fadingInSpeed;
-	float alphaValue;
-
 	SpriteRenderer sr;
 
 	PlanetGenerator generatorScript;
@@ -17,13 +14,7 @@ public class PlanetRegeneration : MonoBehaviour {
 	Transform princeTransform;
 	float princeOffset;
 
-
-
-	// Use this for initialization
 	void Start () {
-		fadingInSpeed = 10f;
-		alphaValue = 1f;
-
 		hasEverBeenVisible = false;
 
 		sr = gameObject.GetComponent<SpriteRenderer> ();
@@ -47,11 +38,10 @@ public class PlanetRegeneration : MonoBehaviour {
 					generatorScript.assignLayer (transform.GetChild (i).gameObject, generatorScript.overlaySprites);
 				}
 			}
-//			alphaValue = 1f;
-//			fadeIn ();
 		}
 	}
-
+		
+	// Relocate and change layers of planet object to create a "new" planet
 	void relocate(){
 		float zRand = Random.Range (600, 650);
 		float zPos = princeOffset + zRand;
@@ -64,15 +54,12 @@ public class PlanetRegeneration : MonoBehaviour {
 		float yRand = Random.Range (-yRange, yRange);
 		float yPos = yRand + princeTransform.position.y;
 
-		Debug.Log ("prince pos x: " + princeTransform.position.x + " y: " + princeTransform.position.y);
-
-		Debug.Log ("planet pos x: " + xPos + " y: " + yPos);
-
-
 		transform.position = new Vector3 (xPos, yPos, zPos);
 		generatorScript.setPlanetRenderOrder (gameObject);
 	}
 
+	//Checks if any of the actual planet layers are visible
+	//used for relocate conditional
 	bool anyChildrenAreVisible() {
 		foreach(Renderer renderer in sr.GetComponentsInChildren<Renderer>()) {
 			if(renderer.isVisible)
@@ -80,26 +67,9 @@ public class PlanetRegeneration : MonoBehaviour {
 		}
 		return false;
 	}
-		
 
-
+	//Build in method that runs once the planet has been rendered in the camera frame
 	void OnBecameVisible() {
 		hasEverBeenVisible = true;
 	}
-
-	void fadeIn(){
-		Debug.Log ("Fading In");
-		while (alphaValue >= 0) {
-			foreach (SpriteRenderer r in GetComponentsInChildren<SpriteRenderer>()) {
-				Color newColor = r.material.color;
-				newColor.a = alphaValue;
-
-				r.material.SetColor ("_Color", newColor);
-				alphaValue -= Time.deltaTime * fadingInSpeed;
-				Debug.Log(alphaValue);
-			}
-		}
-	
-	}
-		
 }

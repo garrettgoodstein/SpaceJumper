@@ -6,7 +6,7 @@ public class HomePlanetMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		gameObject.GetComponent<SpriteRenderer> ().sortingOrder = 10000;
 	}
 
 
