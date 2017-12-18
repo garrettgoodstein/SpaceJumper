@@ -11,7 +11,7 @@ public class HomePlanetMove : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float step = Time.deltaTime * 25;
+		float step = Time.deltaTime * 15;
 		transform.position = Vector3.MoveTowards (transform.position, new Vector3(0,0,transform.position.z + 5), step);
 		
 	}

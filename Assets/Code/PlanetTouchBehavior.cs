@@ -4,11 +4,16 @@ using UnityEngine;
 using System;
 using System.Collections.Specialized;
 using UnityEngine.Experimental.UIElements.StyleEnums;
+//using UnityEditorInternal;
 
 public class PlanetTouchBehavior : MonoBehaviour {
 	GameObject target = null;
-	double initialDist = 0;
-
+	string princeState = "standing";
+	public Sprite jump;
+	public Sprite down;
+	public Sprite stand;
+	Vector3 finalTargetCoord;
+	Vector3 halfTargetCoord;
 
 	void Start () {}
 
@@ -28,31 +33,33 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				Vector3 worldTouch = c.ScreenToWorldPoint (new Vector3 (touchPosition.x, touchPosition.y, transform.position.z + 500));
 				print ("World: " + worldTouch);
 				target = findClosestPlanet (touchPosition);
-
+				princeState = "up";
 				print ("Prince Position: " + transform.position);
-
 				transform.parent.tag = "Planet";
 				transform.parent = null;
-
-				initialDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
+				finalTargetCoord = new Vector3 (target.transform.position.x, target.transform.position.y+25, target.transform.position.z);
+				halfTargetCoord = new Vector3 ((target.transform.position.x + transform.position.x)/2, target.transform.position.y+25+100, (target.transform.position.z + transform.position.z)/2);
 			}
 		}
 		if (target != null){
-			double currentDist = Math.Pow (Math.Abs(transform.position.x - target.transform.position.x),2) + Math.Pow (Math.Abs(transform.position.z - target.transform.position.z),2);
-			Vector3 finalTargetCoord = new Vector3 (target.transform.position.x, target.transform.position.y+25, target.transform.position.z);
-			Vector3 halfTargetCoord = new Vector3 (target.transform.position.x, (float)(target.transform.position.y+3000+(1/2)*initialDist), target.transform.position.z/2);
 			float step = Time.deltaTime * 90;
-			if (currentDist >= initialDist / 2) {
+			if (princeState.Equals ("up")) {
+				GetComponent <SpriteRenderer>().sprite = jump;
 				transform.position = Vector3.MoveTowards (transform.position, halfTargetCoord, step);
+				if (transform.position == halfTargetCoord)
+					princeState = "down";
 			} 
-			else {
+			if (princeState.Equals("down")) {
+				GetComponent <SpriteRenderer>().sprite = down;
 				transform.position = Vector3.MoveTowards (transform.position, finalTargetCoord, step);
-			}
-			if (transform.position == finalTargetCoord) {
-				target.tag = "HomePlanet";
-				transform.parent = target.transform;
-				target.GetComponent<HomePlanetMove>();
-				target = null;
+				if (transform.position == finalTargetCoord) {
+					GetComponent <SpriteRenderer>().sprite = stand;
+					target.tag = "HomePlanet";
+					transform.parent = target.transform;
+					princeState = "standing";
+					target.GetComponent<HomePlanetMove>();
+					target = null;
+				}
 			}
 		}
 	}
