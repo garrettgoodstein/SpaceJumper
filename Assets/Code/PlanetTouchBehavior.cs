@@ -15,13 +15,18 @@ public class PlanetTouchBehavior : MonoBehaviour {
 	Vector3 finalTargetCoord;
 	Vector3 halfTargetCoord;
 
-	void Start () {}
+
+	void Start () {
+	}
 
 	void Update () {
 		if (Input.touchCount == 1) {
 			// The screen has been touched so store the touch
+
 			Touch touch = Input.GetTouch (0); 
 			if (touch.phase == TouchPhase.Ended) {
+				
+
 				var touchPosition = touch.position;
 				print ("Touch Position: " + touchPosition);
 				Camera c = Camera.main;
@@ -41,7 +46,9 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				halfTargetCoord = new Vector3 ((target.transform.position.x + transform.position.x)/2, target.transform.position.y+25+100, (target.transform.position.z + transform.position.z)/2);
 			}
 		}
+
 		if (target != null){
+
 			float step = Time.deltaTime * 90;
 			if (princeState.Equals ("up")) {
 				GetComponent <SpriteRenderer>().sprite = jump;
@@ -62,9 +69,11 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				}
 			}
 		}
+
 	}
 
 	private GameObject findClosestPlanet(Vector2 touch) 
+	// https://docs.unity3d.com/ScriptReference/GameObject.FindGameObjectsWithTag.html has the original code this method was based off from 
 	{
 		GameObject[] gos;
 		gos = GameObject.FindGameObjectsWithTag("Planet");

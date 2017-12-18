@@ -112,8 +112,8 @@ public class PlanetGenerator : MonoBehaviour {
 	}
 
 	void addSpinToLayer(GameObject child){
-		if (child.GetComponent<Spin> () == null) {
-			Spin spin = child.AddComponent<Spin> ();
+		if (child.GetComponent<PlanetLayerSpin> () == null) {
+			PlanetLayerSpin spin = child.AddComponent<PlanetLayerSpin> ();
 			spin.speed = Random.Range (-5, 5);
 			spin.axis = Vector3.forward;
 		}
