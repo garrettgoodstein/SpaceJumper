@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LeftRightBackgroundBehavior: MonoBehaviour {
-	// This gives infinite Background from left to right
+	// This gives the feeling of infinite background 
 
 public float backgroundSize;
 

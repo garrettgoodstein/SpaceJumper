@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UpDownBackgroundBehavior : MonoBehaviour {
-	//This gives the infite up and down background
+	//This gives the feeling of infinite background 
 
 	public float backgroundSize;
 
@@ -20,11 +20,8 @@ public class UpDownBackgroundBehavior : MonoBehaviour {
 		for (int i = 0; i < transform.childCount; i++){
 			layers[i] = transform.GetChild(i);
 		}
-
 		downIndex = 0;
 		upIndex = layers.Length -1;
-
-	
 	}
 
 	private void ScrollDown()
@@ -36,8 +33,6 @@ public class UpDownBackgroundBehavior : MonoBehaviour {
 		if(upIndex < 0) {
 			upIndex = layers.Length-1;
 		}
-
-
 	}
 
 	private void ScrollUp()
@@ -48,12 +43,8 @@ public class UpDownBackgroundBehavior : MonoBehaviour {
 		downIndex++;
 		if(downIndex == layers.Length) 
 			downIndex = 0;
-
-		
 	}
-
-	
-
+		
 	private void Update()
 	{
 		if (cameraTransform.position.y < (layers[downIndex].transform.position.y + viewzone))
