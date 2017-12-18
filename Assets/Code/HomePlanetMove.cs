@@ -6,7 +6,11 @@ public class HomePlanetMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		gameObject.GetComponent<SpriteRenderer> ().sortingOrder = 10000;
+		GetComponent<SpriteRenderer> ().sortingOrder = 10000;
+		PlanetGenerator generatorScript = GameObject.FindGameObjectWithTag ("Planet").GetComponent<PlanetGenerator> ();
+		for (int i = 0; i < transform.childCount; i++) {
+			generatorScript.setChildRenderOrder (10000, transform.GetChild (i).GetComponent<SpriteRenderer> (), i);
+		}
 	}
 
 

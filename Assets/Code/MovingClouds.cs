@@ -22,7 +22,7 @@ public class MovingClouds: MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int randTypeForce = Random.Range (0, 3);
-		int force = Random.Range (5,10); 
+		int force = 5; 
 
 		if (randTypeForce == 0) { 
 			rb.AddForce (0, force, 0);

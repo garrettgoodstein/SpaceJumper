@@ -19,11 +19,9 @@ public class PlanetGenerator : MonoBehaviour {
 
 	void Start () {
 		camera = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<Camera>() ;
-
 		princeTransform = GameObject.FindGameObjectWithTag ("Prince").transform;
 
 		loadTextures ();
-
 		solidSprites = createSpriteList (solids);
 		overlaySprites = createSpriteList (overlays);
 
@@ -143,7 +141,7 @@ public class PlanetGenerator : MonoBehaviour {
 	}
 
 	//Sets the render order for each layer so they appear correctly
-	void setChildRenderOrder(int parentRenderOrder, SpriteRenderer childSR, int childNum){
+	public void setChildRenderOrder(int parentRenderOrder, SpriteRenderer childSR, int childNum){
 		childSR.sortingOrder = parentRenderOrder + childNum;
 	}
 }
