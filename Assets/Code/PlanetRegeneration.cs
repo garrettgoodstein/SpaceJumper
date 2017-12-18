@@ -39,6 +39,7 @@ public class PlanetRegeneration : MonoBehaviour {
 				}
 			}
 		}
+		adjustRenderOrderForPrincePos ();
 	}
 		
 	// Relocate and change layers of planet object to create a "new" planet
@@ -71,5 +72,15 @@ public class PlanetRegeneration : MonoBehaviour {
 	//Build in method that runs once the planet has been rendered in the camera frame
 	void OnBecameVisible() {
 		hasEverBeenVisible = true;
+	}
+
+	//Adjusts the render order of the planets so they are in the correct order when the prince is flying
+	void adjustRenderOrderForPrincePos(){
+		GetComponent<SpriteRenderer> ().sortingOrder = -((int)(transform.position.z - princeTransform.position.z)%2000)*5;;
+		PlanetGenerator generatorScript = GameObject.FindGameObjectWithTag ("Planet").GetComponent<PlanetGenerator> ();
+
+		for (int i = 0; i < transform.childCount; i++) {
+			generatorScript.setChildRenderOrder (GetComponent<SpriteRenderer> ().sortingOrder, transform.GetChild (i).GetComponent<SpriteRenderer> (), i);
+		}
 	}
 }

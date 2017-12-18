@@ -38,9 +38,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				Vector3 worldTouch = c.ScreenToWorldPoint (new Vector3 (touchPosition.x, touchPosition.y, transform.position.z + 500));
 				print ("World: " + worldTouch);
 				target = findClosestPlanet (touchPosition);
-
-//				adjustRenderOrderForTarget (target);
-
 				princeState = "up";
 				print ("Prince Position: " + transform.position);
 				transform.parent.tag = "Planet";
@@ -101,14 +98,5 @@ public class PlanetTouchBehavior : MonoBehaviour {
 			}
 		}
 		return closestPlanet;
-	}
-
-	void adjustRenderOrderForTarget(GameObject planet){
-		planet.GetComponent<SpriteRenderer> ().sortingOrder = 10000;
-		PlanetGenerator generatorScript = GameObject.FindGameObjectWithTag ("Planet").GetComponent<PlanetGenerator> ();
-
-		for (int i = 0; i < planet.transform.childCount; i++) {
-			generatorScript.setChildRenderOrder (10000, planet.transform.GetChild (i).GetComponent<SpriteRenderer> (), i);
-		}
 	}
 }

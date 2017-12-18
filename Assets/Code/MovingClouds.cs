@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovingClouds: MonoBehaviour {
 	// This method is responsible for moving the clouds in various directions. 
 
-	static float THRESHOLD = 5;
+	static float THRESHOLD = 2;
 
 	float initX;
 	float initY;
@@ -22,7 +22,7 @@ public class MovingClouds: MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		int randTypeForce = Random.Range (0, 3);
-		int force = 5; 
+		int force = Random.Range(5, 7);  
 
 		if (randTypeForce == 0) { 
 			rb.AddForce (0, force, 0);
@@ -40,13 +40,13 @@ public class MovingClouds: MonoBehaviour {
 
 		if (transform.position.x > initX + THRESHOLD) {
 			rb.AddForce (-force, 0, 0);
-		} else {
+		} else if (transform.position.x < initX - THRESHOLD) {
 			rb.AddForce (force, 0, 0);
 		}
 
 		if (transform.position.y > initY + THRESHOLD) {
 			rb.AddForce (0, -force, 0);
-		} else {
+		} else if (transform.position.y < initY - THRESHOLD) {
 			rb.AddForce (0, force, 0);
 		}
 	}
