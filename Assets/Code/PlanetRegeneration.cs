@@ -53,13 +53,23 @@ public class PlanetRegeneration : MonoBehaviour {
 	}
 
 	void relocate(){
-		float randZ = Random.Range (450, 500);
-		float zPos = princeOffset + randZ;
+		float zRand = Random.Range (600, 650);
+		float zPos = princeOffset + zRand;
 
-		float yRange = generatorScript.calculateHeightRange (randZ);
-		float xRange = generatorScript.calculateWidthRange (randZ);
+		float xRange = generatorScript.calculateWidthRange (zRand);
+		float xRand = Random.Range (-xRange, xRange);
+		float xPos = xRand + princeTransform.position.x;
 
-		transform.position = new Vector3 (Random.Range(-xRange,xRange), Random.Range(-yRange, yRange), zPos);
+		float yRange = generatorScript.calculateHeightRange (zRand);
+		float yRand = Random.Range (-yRange, yRange);
+		float yPos = yRand + princeTransform.position.y;
+
+		Debug.Log ("prince pos x: " + princeTransform.position.x + " y: " + princeTransform.position.y);
+
+		Debug.Log ("planet pos x: " + xPos + " y: " + yPos);
+
+
+		transform.position = new Vector3 (xPos, yPos, zPos);
 		generatorScript.setPlanetRenderOrder (gameObject);
 	}
 
