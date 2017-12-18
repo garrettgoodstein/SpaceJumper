@@ -44,7 +44,7 @@ public class PlanetTouchBehavior : MonoBehaviour {
 				Destroy (GetComponentInParent <HomePlanetMove>());
 				transform.parent = null;
 				finalTargetCoord = new Vector3 (target.transform.position.x, target.transform.position.y+25, target.transform.position.z);
-				halfTargetCoord = new Vector3 ((target.transform.position.x + transform.position.x)/2, target.transform.position.y+25+100, (target.transform.position.z + transform.position.z)/2);
+				halfTargetCoord = new Vector3 ((target.transform.position.x + transform.position.x)/2, target.transform.position.y+25+70, (target.transform.position.z + transform.position.z)/2);
 			}
 		}
 
