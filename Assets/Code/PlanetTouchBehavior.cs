@@ -49,7 +49,6 @@ public class PlanetTouchBehavior : MonoBehaviour {
 		}
 
 		if (target != null){
-
 			float step = Time.deltaTime * 90;
 			if (princeState.Equals ("up")) {
 				GetComponent <SpriteRenderer>().sprite = jump;
